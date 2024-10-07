@@ -181,6 +181,10 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
+
+            // Start the slider when the page is loaded
+        window.onload = startSlider;
+
         var swiper = new Swiper(".swiper", {
             slidesPerView: 1,
             spaceBetween: 0,
@@ -209,6 +213,7 @@
         });
         const images = document.querySelectorAll('.slider');
         var i = 0;
+        var intervalId;
         function updateImages() {
 
             const imageLength = images.length;
@@ -225,14 +230,33 @@
 
             setTimeout(function(){
                 target.css('transform', 'translateY(' + 700 + '%)');
-                target.fadeIn(2000);
+                target.fadeIn(1600);
             }, 1600)
 
             i = (i + 1) % imageLength;
 
         }
-        setInterval(updateImages, 3000);
         
+        function startSlider() {
+            if (!intervalId) {
+                intervalId = setInterval(updateImages, 3000);
+            }
+        }
+
+        // Stop the interval
+        function stopSlider() {
+            clearInterval(intervalId);
+            intervalId = null;
+        }
+
+        document.addEventListener('visibilitychange', () => {
+            if (document.visibilityState === 'hidden') {
+                stopSlider(); // 페이지가 보이지 않을 때 슬라이더 중지
+            } else {
+                startSlider(); // 페이지가 보일 때 슬라이더 시작
+            }
+        });
+
     </script>
 </body>
 </html>
