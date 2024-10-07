@@ -196,6 +196,7 @@ div[class^=aboutus_box] {
 .client_box {
     padding: 0 14.5% 0 13.5%;
     display: inline-flex;
+    width: 100%;
 }
 .client_box .title_box{
     width: 100%;
@@ -217,8 +218,6 @@ div[class^=aboutus_box] {
 .client_box .image_box .slider img{
     height: 220px;
     width: 100%;
-    /* min-width: 330px;
-    max-width: 682px; */
     margin-bottom: 20px;
    
 }
@@ -227,18 +226,7 @@ div[class^=aboutus_box] {
 .client_box .image_box .slider.img3 {transform: translateY(200%);}
 .client_box .image_box .slider.img4 {transform: translateY(300%);}
 .client_box .image_box .slider.img5 {transform: translateY(400%);}
-.client_box .image_box .slider.img6 {transform: translateY(500%);}
-.client_box .image_box .slider.img7 {transform: translateY(600%);}
-.client_box .image_box .slider.img8 {transform: translateY(700%);}
-
-@keyframes aniScroll{
-    0% {
-        transform: translateY(0%);
-    }
-    100% {
-        transform: translateY(-100%);
-    }
-  }
+.client_box .image_box .slider.img6 {transform: translateY(500%); z-index:1;}
 
 /* 스와이퍼 */
 .swiper {
