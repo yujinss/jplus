@@ -223,7 +223,7 @@
 
             images.forEach((img, index) => {
                 const newPosition = (index + i + 1) % imageLength + 1;
-                if( index != 7 ){
+                if( index != imageLength - 1 ){
                     $(".img"+newPosition).css('transform', 'translateY(' + index * 100 + '%)');
                 }
             });
