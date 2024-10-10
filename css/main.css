@@ -198,7 +198,7 @@ div[class^=aboutus_box] {
 
 .history_box .swiper{
     margin-left: 13.5%;
-    width: 100%;
+    width: calc(100% - 14%);
     height: 647px;
 }
 .history_box .swiper .swiper-wrapper{
@@ -228,6 +228,7 @@ div[class^=aboutus_box] {
     justify-content: flex-end;
     transition: height 0.5s ease, justify-content 0.5s ease;
 }
+.history_box .swiper .swiper-wrapper .swiper-slide:first-child{margin-left: 20px;}
 .history_box .swiper .swiper-wrapper .swiper-slide:hover{
     height: 508px;
     justify-content: flex-start;
@@ -241,11 +242,13 @@ div[class^=aboutus_box] {
     position: absolute;
     left:0;
     bottom:-9px;
+    transition: box-shadow 0.5s ease;
 }
 .history_box .swiper .swiper-wrapper .swiper-slide:hover:before{
     width:20px;
     height:20px;
     background-color: #fff;
+    box-shadow: rgb(126,78,35) 0px 0px 0px 10px, rgb(84,56,27) 0px 0px 0px 20px;
 }
 .history_box .swiper .swiper-wrapper .swiper-slide:after{
     content:'';
