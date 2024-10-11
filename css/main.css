@@ -516,6 +516,35 @@ div[class^=aboutus_box] {
     background-color: #F26A25;
     color: #000000;
 }
+.solution_box {padding: 21% 14.5% 20% 13.5%;}
+.solution_box .tab_container .tab_list{
+    display: flex;
+    border-bottom: 2px solid #272727;
+    margin: 14.5% 0 7% 0;
+    gap: 2px;
+}
+.solution_box .tab_container .tab_list a{
+    padding: 17px 0;
+    width: 247px;
+    border-radius: 20px 20px 0 0;
+    text-align: center;
+    background-color: #151515;
+    color: #5B5B5B;
+    font-weight: 700;
+}
+.solution_box .tab_container .tab_list a.active{
+    background-color: #FFFFFF;
+    color: #F26A25;
+}
+.solution_box .tab_container .text_box p{
+    background-color: #111111;
+    border-radius: 20px;
+    padding: 30px 40px;
+    margin-top: 8%;
+    width: 100%;
+    line-height: 1.2;
+}
+
 /* 스와이퍼 */
 .swiper {
     width: 100%;
@@ -663,3 +692,4 @@ div[class^=aboutus_box] {
     display: flex;
     flex-direction: column;
     gap: 16px;
+}
