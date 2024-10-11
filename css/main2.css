@@ -607,6 +607,7 @@ div[class^=aboutus_box] {
 	100% { transform: translateY(-100%); }
 }
 
+/* 시작 */
 .career_content_box{
     margin-top: 70px;
 }
@@ -617,7 +618,6 @@ div[class^=aboutus_box] {
 .career_content_ideal_talent_outer{
     width: 632px;
     height: 273px;
-    padding-top: 32px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -657,10 +657,13 @@ div[class^=aboutus_box] {
 .ideal_telent_font_div{
     text-align: center;
 }
-.career_content_ideal_talent_inner{
+.career_content_ideal_talent_inner_default{
     display: flex;
     flex-direction: column;
     gap: 16px;
+}
+.career_content_ideal_talent_inner_active{
+    padding: 36px;
 }
 
 .career_content_common_outer{

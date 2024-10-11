@@ -487,7 +487,7 @@
 
                     <div style="display: inline-flex;">
                         <div class="career_content_ideal_talent_outer">
-                            <div class="career_content_ideal_talent_inner">
+                            <div class="career_content_ideal_talent_inner_default">
                                 <div class="ideal_talent_question_div">
                                     <span class="career_common_question_mark" style="color: #F26A25;">
                                         ?
@@ -690,6 +690,26 @@
                 }   
             }, 100)
         }
+
+        $(".career_content_ideal_talent_outer").css({
+            "transition": "background-color 1s ease" // 배경색 전환을 1초 동안 서서히 적용
+        });
+
+        $(".career_content_ideal_talent_outer").hover(function(){
+
+            $(".career_content_ideal_talent_inner_active").show();
+            $(".career_content_ideal_talent_inner_default").hide();
+
+            $(".career_content_ideal_talent_outer").css("background", "#F1F4F9");
+
+            }, function(){
+
+            $(".career_content_ideal_talent_inner_active").hide();
+            $(".career_content_ideal_talent_inner_default").show();
+
+            $(".career_content_ideal_talent_outer").css("background", "#F26A25");
+
+        });
 
     </script>
 </body>
