@@ -615,8 +615,8 @@ div[class^=aboutus_box] {
     height: 273px;
 }
 .career_content_ideal_talent_outer{
-    width: 560px;
-    height: 160px;
+    width: 632px;
+    height: 273px;
     padding-top: 32px;
     display: flex;
     flex-direction: column;
@@ -653,8 +653,6 @@ div[class^=aboutus_box] {
 .ideal_talent_question_div{
     display: flex;
     justify-content: center;
-    width: 560px;
-    height: 42px;
 }
 .ideal_telent_font_div{
     text-align: center;
@@ -663,3 +661,70 @@ div[class^=aboutus_box] {
     display: flex;
     flex-direction: column;
     gap: 16px;
+}
+
+.career_content_common_outer{
+    width: 350px;
+    height: 273px;
+    padding-top: 32px;
+    margin-left: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #FFBA53;
+    border-radius: 40px;
+}
+
+.career_content_common_inner{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.career_content_always_outer{
+    width: 632px;
+    height: 319px;
+    padding-top: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 40px;
+}
+
+.career_always_font{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 44px;
+    color: #434343;
+}
+
+.always_text1{
+    padding-left: 90px;
+}
+.always_text2{
+    padding-left: 117px;
+}
+
+.career_content_joining_journey_outer{
+    width: 726px;
+    height: 319px;
+    padding-top: 32px;
+    margin-left: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #B1DDE7;
+    border-radius: 40px;
+}
+
+.career_content_joining_journey_inner{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.joining_journey_question_div{
+    display: flex;
+    justify-content: center;
+}

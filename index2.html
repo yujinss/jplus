@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JPLUS COMS</title>
-    <link rel="stylesheet" href="./css/main.css" type="text/css" />
+    <link rel="stylesheet" href="./css/main2.css" type="text/css" />
     <link rel="icon" href="./images/favicon.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
@@ -293,7 +293,7 @@
                             시스템을 편리하고 안정적으로 사용할 수<br/>
                             있도록 지원합니다.
                         </p>
-                        <button class="more_btn" onclick='toggleDiv(1)'>More</button>
+                        <button class="more_btn" onclick='toggleDiv(1)'>More</button> <!-- 1번을 누르면 -->
                     </div>
                     <div class="innerbox mo">
                         <div class="title_box">
@@ -325,9 +325,9 @@
                         <button class="more_btn" onclick='toggleDiv(3)'>More</button>
                     </div>
                 </div>
-                <div class="business_box_active">
-                    <div class="innerbox si active"> 
-                        <div class="click_title">
+                <div class="business_box_active" id="btnActive">
+                    <div class="innerbox si" id="div1"> <!-- 이 라인에 active class가 들어가면 나타나게 css를 넣어놨어용 근데 class 추가가안돼용 // 1번 버튼 누르면 1번에 active class 나타나게 !  --> 
+                        <div class="click_title" onclick='toggleDiv(1)'>
                             <p class="stitle">BUSINESS</p>
                             <p>SISM</p>
                         </div>
@@ -370,28 +370,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="innerbox mo">
-                        <div class="click_title">
+                    <div class="innerbox mo" id="div2">
+                        <div class="click_title" onclick='toggleDiv(2)'>
                             <p class="stitle">BUSINESS</p>
                             <p>MOBILE COUPON</p>
                         </div>
-                    </div>
-                    <div class="innerbox acc"> 
-                        <div class="click_title">
-                            <p class="stitle">BUSINESS</p>
-                            <p>MOBILE ACC</p>
-                        </div>
-                    </div>
-                </div>
-                    <!-- -->
-                <div class="business_box_active">
-                    <div class="innerbox si"> 
-                        <div class="click_title">
-                            <p class="stitle">BUSINESS</p>
-                            <p>SISM</p>
-                        </div>
-                    </div>
-                    <div class="innerbox mo active">
                         <div class="innerbox_active">
                             <div class="left_side">
                                 <div class="title_box">
@@ -439,28 +422,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="innerbox acc"> 
-                        <div class="click_title">
+                    <div class="innerbox acc" id="div3"> 
+                        <div class="click_title" onclick='toggleDiv(3)'>
                             <p class="stitle">BUSINESS</p>
                             <p>MOBILE ACC</p>
                         </div>
-                    </div>
-                </div>
-                    <!-- -->
-                <div class="business_box_active">
-                    <div class="innerbox si"> 
-                        <div class="click_title">
-                            <p class="stitle">BUSINESS</p>
-                            <p>SISM</p>
-                        </div>
-                    </div>
-                    <div class="innerbox mo">
-                        <div class="click_title">
-                            <p class="stitle">BUSINESS</p>
-                            <p>MOBILE COUPON</p>
-                        </div>
-                    </div>
-                    <div class="innerbox acc active"> 
                         <div class="innerbox_active">
                             <div class="left_side">
                                 <div class="title_box">
@@ -508,20 +474,90 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                    
                 </div>
             </div>
-            <div id="solution">
+            <div id="solution"></div>
+            <div id="career" class="client_box height1080" style="    display: ruby;">
                 <div class="title_box">
                     <p class="stitle">CAREER</p>
                     <h2 class="title">새로운 <span class="orangetxt">J+COMS 人</span>을 <br/>환영합니다.</h2>
                 </div>
-            </div>
-            <div id="career">
-                <div class="title_box">
-                    <p class="stitle">CAREER</p>
-                    <h2 class="title">새로운 <span class="orangetxt">J+COMS 人</span>을 <br/>환영합니다.</h2>
+                <div class="career_content_box client_box" style="display: block;">
+
+                    <div style="display: inline-flex;">
+                        <div class="career_content_ideal_talent_outer">
+                            <div class="career_content_ideal_talent_inner">
+                                <div class="ideal_talent_question_div">
+                                    <span class="career_common_question_mark" style="color: #F26A25;">
+                                        ?
+                                    </span>
+                                </div>
+                                <div class="ideal_telent_font_div">
+                                    <span class="career_common_font">
+                                        인재상
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="career_content_common_things">
+                            <div class="career_content_common_outer">
+                                <div class="career_content_common_inner">
+                                    <div class="ideal_talent_question_div">
+                                        <span class="career_common_question_mark" style="color: #FFBA53;">
+                                            ?
+                                        </span>
+                                    </div>
+                                    <div class="ideal_telent_font_div">
+                                        <span class="career_common_font">
+                                            공통사항
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="display: inline-flex; margin-top: 40px">
+                        <div class="career_content_always_outer">
+                            <div class="career_content_always_inner">
+                                <div class="always_font_div">
+                                    <span class="career_always_font">
+                                        <div class="always_text1">
+                                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <rect x="7" width="5" height="19" rx="2" fill="#434343"/>
+                                                <rect x="19" y="7" width="5" height="19" rx="2" transform="rotate(90 19 7)" fill="#434343"/>
+                                            </svg>
+                                        </div>
+                                        <div class="always_text2">
+                                            제이플러스컴즈는 아래<br>
+                                            직군을 상시 모집중입니다.
+                                        </div>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="career_content_common_things">
+                            <div class="career_content_joining_journey_outer">
+                                <div class="career_content_joining_journey_inner">
+                                    <div class="joining_journey_question_div">
+                                        <span class="career_common_question_mark" style="color: #B1DDE7;">
+                                            ?
+                                        </span>
+                                    </div>
+                                    <div class="ideal_telent_font_div">
+                                        <span class="career_common_font">
+                                            합류여정
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
             </div>
             <div id="contact"></div>
         </div>
@@ -631,7 +667,29 @@
 
         createRollingBanner('.rollingbannerwrap', '.rollingbanner');
 
+        //business more button
+        function toggleDiv(index) {
+            const activediv = document.getElementById('btnActive');
+            const defaultdiv = document.getElementById('btnDefault');
+            const targetDiv = document.getElementById('div' + index); //요기
 
+            setTimeout(function(){
+                if(activediv.style.display === 'none') {
+                    defaultdiv.style.display = 'flex';
+                    activediv.style.display = 'none';
+                    targetDiv.classList.remove('active');
+                }else {
+                    defaultdiv.style.display = 'none';
+                    activediv.style.display = 'flex';
+
+                    document.getElementById('div' + 1).classList.remove('active');
+                    document.getElementById('div' + 2).classList.remove('active');
+                    document.getElementById('div' + 3).classList.remove('active');
+                    
+                    targetDiv.classList.add('active'); //클래스추가가안돼ㅠ
+                }   
+            }, 100)
+        }
 
     </script>
 </body>
