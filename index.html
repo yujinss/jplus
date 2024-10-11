@@ -477,7 +477,29 @@
                     
                 </div>
             </div>
-            <div id="solution"></div>
+            <div id="solution" class="solution_box">
+                <div class="title_box">
+                    <p class="stitle">SOLUTION</p>
+                    <h2 class="title">모바일 콘텐츠 <span class="orangetxt">발급/인증 솔루션</span>은 <br/>B2B, B2C시장에서 홍보, 고객관리 등 대상과 목적에 <br/>따라 다양하게 활용 가능합니다.</h2>
+                </div>
+                <div class="tab_container">
+                    <div class="tab_list">
+                        <a class="active">서비스 흐름도</a>
+                        <a class="">활용범위</a>
+                        <a class="">지원기능</a>
+                    </div>
+                    <div class="tab_content01">
+                        <img src="./images/solution_01.png">
+                        <div class="text_box">
+                            <p>
+                                * 인증: 고객사의 유효성검증 및 금액 / 교환상품정보 등 결과 회신 <br/>
+                                * 승인: 결제내역을 통보 받아 결제 결과 회신 <br/>
+                                * 공급사와 교환사는 같은 업체일수도 있고, 서로 다들수도 있음
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div id="career">
                 <div class="title_box">
                     <p class="stitle">CAREER</p>
@@ -596,7 +618,7 @@
         function toggleDiv(index) {
             const activediv = document.getElementById('btnActive');
             const defaultdiv = document.getElementById('btnDefault');
-            const targetDiv = document.getElementById('div' + index); //요기
+            const targetDiv = document.getElementById('div' + index); 
 
             setTimeout(function(){
                 if(activediv.style.display === 'none') {
@@ -611,7 +633,7 @@
                     document.getElementById('div' + 2).classList.remove('active');
                     document.getElementById('div' + 3).classList.remove('active');
                     
-                    targetDiv.classList.add('active'); //클래스추가가안돼ㅠ
+                    targetDiv.classList.add('active'); 
                 }   
             }, 100)
         }
