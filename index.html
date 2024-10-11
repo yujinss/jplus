@@ -293,7 +293,7 @@
                             시스템을 편리하고 안정적으로 사용할 수<br/>
                             있도록 지원합니다.
                         </p>
-                        <button class="more_btn" onclick='toggleDiv(1)'>More</button> <!-- 1번을 누르면 -->
+                        <button class="more_btn" onclick='toggleDiv(1)'>More</button>
                     </div>
                     <div class="innerbox mo">
                         <div class="title_box">
@@ -326,7 +326,7 @@
                     </div>
                 </div>
                 <div class="business_box_active" id="btnActive">
-                    <div class="innerbox si" id="div1"> <!-- 이 라인에 active class가 들어가면 나타나게 css를 넣어놨어용 근데 class 추가가안돼용 // 1번 버튼 누르면 1번에 active class 나타나게 !  --> 
+                    <div class="innerbox si" id="div1"> 
                         <div class="click_title" onclick='toggleDiv(1)'>
                             <p class="stitle">BUSINESS</p>
                             <p>SISM</p>
@@ -484,12 +484,59 @@
                 </div>
                 <div class="tab_container">
                     <div class="tab_list">
-                        <a class="active">서비스 흐름도</a>
-                        <a class="">활용범위</a>
-                        <a class="">지원기능</a>
+                        <a class="on" data-tab="tab1">서비스 흐름도</a>
+                        <a class="" data-tab="tab2">활용범위</a>
+                        <a class="" data-tab="tab3">지원기능</a>
                     </div>
-                    <div class="tab_content01">
+                    <div class="tab_content" id="tab1">
                         <img src="./images/solution_01.png">
+                        <div class="text_box">
+                            <p>
+                                * 인증: 고객사의 유효성검증 및 금액 / 교환상품정보 등 결과 회신 <br/>
+                                * 승인: 결제내역을 통보 받아 결제 결과 회신 <br/>
+                                * 공급사와 교환사는 같은 업체일수도 있고, 서로 다들수도 있음
+                            </p>
+                        </div>
+                    </div>
+                    <div class="tab_content" id="tab2">
+                        <div class="tab_inner b2b">
+                            <div class="titleline">
+                                <span>B2B 활용</span>
+                                <p>홍보, 고객관리 등 대상과 목적에 따라 다양하게 활용 가능합니다.</p>
+                            </div>
+                            <div class="bannerline">
+                                <div class="rollingbanner">
+                                    <ul class="rollingbanner_ul">
+                                        <li>
+                                            <img src="./images/solution_b2b_01.png">
+                                        </li>
+                                        <li>
+                                            <img src="./images/solution_b2b_02.png">
+                                        </li>
+                                        <li>
+                                            <img src="./images/solution_b2b_03.png">
+                                        </li>
+                                        <li>
+                                            <img src="./images/solution_b2b_04.png">
+                                        </li>
+                                        <li>
+                                            <img src="./images/solution_b2b_05.png">
+                                        </li>
+                                        <li>
+                                            <img src="./images/solution_b2b_06.png">
+                                        </li>
+                                        <li>
+                                            <img src="./images/solution_b2b_07.png">
+                                        </li>
+                                        <li>
+                                            <img src="./images/solution_b2b_08.png">
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab_content" id="tab3">
                         <div class="text_box">
                             <p>
                                 * 인증: 고객사의 유효성검증 및 금액 / 교환상품정보 등 결과 회신 <br/>
@@ -595,25 +642,6 @@
                 startSlider(); // 페이지가 보일 때 슬라이더 시작
             }
         });
-        //business roller
-        function createRollingBanner(containerSelector, bannerSelector) {
-            let roller = document.querySelector(containerSelector + ' ' + bannerSelector);
-            roller.id = 'roller1';
-
-            let clone = roller.cloneNode(true);
-            clone.id = 'roller2';
-            document.querySelector(containerSelector).appendChild(clone);
-
-            document.querySelector(containerSelector + ' #roller1').style.left = '0px';
-            document.querySelector(containerSelector + ' #roller2').style.left = document.querySelector(containerSelector + ' ' + bannerSelector + ' ul').offsetWidth + 'px';
-
-            roller.classList.add('original');
-            clone.classList.add('clone');
-        }
-        createRollingBanner('.right_side', '.rollingbanner');
-
-        createRollingBanner('.rollingbannerwrap', '.rollingbanner');
-
         //business more button
         function toggleDiv(index) {
             const activediv = document.getElementById('btnActive');
@@ -637,6 +665,51 @@
                 }   
             }, 100)
         }
+        //business RollingBanner
+        function createRollingBanner(containerSelectors, bannerSelector) {
+            containerSelectors.forEach((containerSelector, index) => {
+                let roller = document.querySelector(containerSelector + ' ' + bannerSelector);
+                roller.id = 'roller1-' + index; 
+
+                let clone = roller.cloneNode(true);
+                clone.id = 'roller2-' + index; 
+                document.querySelector(containerSelector).appendChild(clone);
+
+                document.querySelector(containerSelector + ' #roller1-' + index).style.left = '0px';
+                document.querySelector(containerSelector + ' #roller2-' + index).style.left = document.querySelector(containerSelector + ' ' + bannerSelector + ' ul').offsetWidth + 'px';
+
+                roller.classList.add('original');
+                clone.classList.add('clone');
+            });
+        }
+
+        // 사용 예시: 각 클래스에 대해 createRollingBanner 호출
+        createRollingBanner(['.right_side', '.rollingbannerwrap', '.bannerline'], '.rollingbanner');
+        //solution tab
+        const tabLists = document.querySelectorAll('.tab_list a');
+        const tabContents = document.querySelectorAll('.tab_content');
+
+        tabLists.forEach(tabList => {
+            tabList.addEventListener('click', () => {
+            const tabId = tabList.getAttribute('data-tab');
+            
+            tabContents.forEach(tabContent => {
+                if (tabContent.id === tabId) {
+                tabContent.style.display = 'block';
+                } else {
+                tabContent.style.display = 'none';
+                }
+            });
+
+            tabLists.forEach(list => {
+                list.classList.remove('on');
+            });
+            tabList.classList.add('on');
+            });
+        });
+
+        document.getElementById("tab1").style.display = "block";
+        tabLists[0].classList.add('on');
 
     </script>
 </body>

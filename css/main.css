@@ -532,7 +532,7 @@ div[class^=aboutus_box] {
     color: #5B5B5B;
     font-weight: 700;
 }
-.solution_box .tab_container .tab_list a.active{
+.solution_box .tab_container .tab_list a.on{
     background-color: #FFFFFF;
     color: #F26A25;
 }
@@ -542,7 +542,37 @@ div[class^=aboutus_box] {
     padding: 30px 40px;
     margin-top: 8%;
     width: 100%;
-    line-height: 1.2;
+    line-height: 1.5;
+    font-size: 14px;
+}
+.solution_box .tab_content .tab_inner {
+    overflow: hidden;
+}
+.solution_box .tab_content .tab_inner .titleline{
+    display: flex;
+}
+.solution_box .tab_content .tab_inner .bannerline{
+    display: flex;
+}
+.solution_box .tab_content .tab_inner .rollingbanner_ul{
+    display: flex;
+    gap: 20px;
+}
+.solution_box .tab_content .tab_inner .rollingbanner.original {
+	animation: rollingright1 33s linear infinite;
+}
+.solution_box .tab_content .tab_inner .rollingbanner.clone {
+	animation: rollingright2 33s linear infinite;
+}
+
+@keyframes rollingright1 {
+    0%{ transform: translateX(0%) }
+    100%{ transform: translateX(-100%) }
+}
+
+@keyframes rollingright2 {
+    0% { transition: translateX(100%); }
+	100% { transform: translateX(0); }
 }
 
 /* 스와이퍼 */
@@ -618,20 +648,20 @@ div[class^=aboutus_box] {
     margin-top: 40px;
 }
 .rollingbanner.original {
-	animation: rollingright1 33s linear infinite;
+	animation: rollingtop1 33s linear infinite;
 }
 .rollingbanner.clone {
-	animation: rollingright2 33s linear infinite;
+	animation: rollingtop2 33s linear infinite;
 }
 
-@keyframes rollingright1 {
+@keyframes rollingtop1 {
 	0% { transform: translateY(0); }
 	/* 50% { transform: translateY(-100%); }
 	50.01% { transform: translateY(100%); } */
 	100% { transform: translateY(-100%); }
 }
 
-@keyframes rollingright2 {
+@keyframes rollingtop2 {
 	0% { transition: translateY(100%); }
 	100% { transform: translateY(-100%); }
 }
