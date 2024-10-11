@@ -327,7 +327,7 @@
                 </div>
                 <div class="business_box_active" id="btnActive">
                     <div class="innerbox si" id="div1"> <!-- 이 라인에 active class가 들어가면 나타나게 css를 넣어놨어용 근데 class 추가가안돼용 // 1번 버튼 누르면 1번에 active class 나타나게 !  --> 
-                        <div class="click_title">
+                        <div class="click_title" onclick='toggleDiv(1)'>
                             <p class="stitle">BUSINESS</p>
                             <p>SISM</p>
                         </div>
@@ -371,7 +371,7 @@
                         </div>
                     </div>
                     <div class="innerbox mo" id="div2">
-                        <div class="click_title">
+                        <div class="click_title" onclick='toggleDiv(2)'>
                             <p class="stitle">BUSINESS</p>
                             <p>MOBILE COUPON</p>
                         </div>
@@ -423,7 +423,7 @@
                         </div>
                     </div>
                     <div class="innerbox acc" id="div3"> 
-                        <div class="click_title">
+                        <div class="click_title" onclick='toggleDiv(3)'>
                             <p class="stitle">BUSINESS</p>
                             <p>MOBILE ACC</p>
                         </div>
@@ -597,16 +597,23 @@
             const activediv = document.getElementById('btnActive');
             const defaultdiv = document.getElementById('btnDefault');
             const targetDiv = document.getElementById('div' + index); //요기
-            
-            if(activediv.style.display === 'none') {
-                defaultdiv.style.display = 'flex';
-                activediv.style.display = 'none';
-                targetDiv.classList.add('active'); //클래스추가가안돼ㅠ
-            }else {
-                defaultdiv.style.display = 'none';
-                activediv.style.display = 'flex';
-                targetDiv.classList.remove('active');
-            }   
+
+            setTimeout(function(){
+                if(activediv.style.display === 'none') {
+                    defaultdiv.style.display = 'flex';
+                    activediv.style.display = 'none';
+                    targetDiv.classList.remove('active');
+                }else {
+                    defaultdiv.style.display = 'none';
+                    activediv.style.display = 'flex';
+
+                    document.getElementById('div' + 1).classList.remove('active');
+                    document.getElementById('div' + 2).classList.remove('active');
+                    document.getElementById('div' + 3).classList.remove('active');
+                    
+                    targetDiv.classList.add('active'); //클래스추가가안돼ㅠ
+                }   
+            }, 100)
         }
 
     </script>

@@ -324,7 +324,7 @@ div[class^=aboutus_box] {
 .client_box .image_box .slider.img6 {transform: translateY(500%); z-index:1;}
 #business{
     width: 100%;
-    /* height: 1482px; */
+    height: 1482px;
     background: url(../images/business_01.png) 100% bottom no-repeat;
 }
 .business_box {
@@ -377,10 +377,9 @@ div[class^=aboutus_box] {
 }
 .business_box_active{
     overflow: hidden;
-    /* display: none; */
+    display: none;
     margin: 0 5%;
     height: 1077px;
-    display: flex;
 }
 .business_box_active .innerbox{
     width: 157px;
@@ -435,8 +434,7 @@ div[class^=aboutus_box] {
     height: 1077px;
     border-radius: 40px;
     gap: 10%;
-    display: flex;
-    /* display: none; */
+    display: none;
 }
 .business_box_active .innerbox_active.mo {
     background: url(../images/business_03.png), linear-gradient(90deg, rgba(255,255,255,1) 95%, rgba(153,153,153,1) 100%);
