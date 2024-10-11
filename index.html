@@ -502,7 +502,7 @@
                         <div class="tab_inner b2b">
                             <div class="titleline">
                                 <span>B2B 활용</span>
-                                <p>홍보, 고객관리 등 대상과 목적에 따라 다양하게 활용 가능합니다.</p>
+                                <p class="txt">홍보, 고객관리 등 대상과 목적에 따라 다양하게 활용 가능합니다.</p>
                             </div>
                             <div class="bannerline">
                                 <div class="rollingbanner">
@@ -534,15 +534,75 @@
                                     </ul>
                                 </div>
                             </div>
+                            <div class="titleline">
+                                <span>B2C 활용</span>
+                                <p class="txt">홍보, 고객관리 등 대상과 목적에 따라 다양하게 활용 가능합니다.</p>
+                            </div>
+                            <div class="bannerline2">
+                                <div class="rollingbanner">
+                                    <ul class="rollingbanner_ul">
+                                        <li>
+                                            <img src="./images/solution_b2c_01.png">
+                                        </li>
+                                        <li>
+                                            <img src="./images/solution_b2c_02.png">
+                                        </li>
+                                        <li>
+                                            <img src="./images/solution_b2c_03.png">
+                                        </li>
+                                        <li>
+                                            <img src="./images/solution_b2c_04.png">
+                                        </li>
+                                        <li>
+                                            <img src="./images/solution_b2c_05.png">
+                                        </li>
+                                        <li>
+                                            <img src="./images/solution_b2c_06.png">
+                                        </li>
+                                        <li>
+                                            <img src="./images/solution_b2c_07.png">
+                                        </li>
+                                        <li>
+                                            <img src="./images/solution_b2c_08.png">
+                                        </li>
+                                        <li>
+                                            <img src="./images/solution_b2c_09.png">
+                                        </li>
+                                        <li>
+                                            <img src="./images/solution_b2c_10.png">
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="tab_content" id="tab3">
-                        <div class="text_box">
+                        <div class="supportbox">
+                            <h3>상품교환형</h3>
                             <p>
-                                * 인증: 고객사의 유효성검증 및 금액 / 교환상품정보 등 결과 회신 <br/>
-                                * 승인: 결제내역을 통보 받아 결제 결과 회신 <br/>
-                                * 공급사와 교환사는 같은 업체일수도 있고, 서로 다들수도 있음
+                                <span class="orangetxt">교환형 상품권</span>&nbsp;단일 브랜드 매장에서 단일 상품과 교환이 가능한 가장 일반적인 상품권 <br/>
+                                <span class="orangetxt">패키지 상품권</span>&nbsp;단일 브랜드 매장에서 복수의 상품과 교환이 가능한 상품권<br/>
+                                <span class="orangetxt">배송형 상품권</span>&nbsp;전화번호를 이용 상품권을 보내고 수신자가 원하는 배송지를 입력하면, 상품이 배송 되는 상품권
                             </p>
+                            <p class="annot">※ 사용처 POS연동 / 충전형 APP개발 필요</p>
+                        </div>
+                        <div class="supportbox">
+                            <h3>금액형</h3>
+                            <p>
+                                <span class="orangetxt">금액형 상품권</span>&nbsp;단일 브랜드 매장에서 결제는 물론, 남은 잔액도 현금처럼 사용 가능한 가장 일반적인 형태의 금액 상품권<br/>
+                                <span class="orangetxt">충전형 상품권</span>&nbsp;APP과 연계된 선불화폐 상품권으로 Web, Mobile결제 등을 통해 충전이 가능한 금액 상품권<br/>
+                                <span class="orangetxt">반환형 상품권</span>&nbsp;상품권에 사용횟수, 유효기간 등의 반환조건을 설정하고, 조건이 성립되면  구매자에게 잔액이 회수되는 상품권<br/>
+                                <span class="orangetxt">복합형 상품권</span>&nbsp;복수의 브랜드 매장 혹은  웹사이트에서 사용 가능한 금액형 상품권<br/>
+                                <span class="orangetxt">지류 상품권</span>&nbsp;Pin번호와 관리번호를 대량 발송 후, 인쇄소와 연계하여 상품권의 입/출고, 사용/회수/폐기 관리가 가능한 상품권
+                            </p>
+                            <p class="annot">※ 사용처 POS연동 / 충전형 APP개발 / 지류 인쇄소 연동(지류상품권) 필요</p>
+                        </div>
+                        <div class="supportbox">
+                            <h3>할인형</h3>
+                            <p>
+                                <span class="orangetxt">할인권</span>&nbsp;독립적인 상품의 교환, 결제는 불가능하지만 금액을 할인하거나 사은품을 제공하는 Coupon
+                            </p>
+                            <p class="annot">※ 사용처 POS연동 필요</p>
                         </div>
                     </div>
                 </div>
@@ -684,7 +744,7 @@
         }
 
         // 사용 예시: 각 클래스에 대해 createRollingBanner 호출
-        createRollingBanner(['.right_side', '.rollingbannerwrap', '.bannerline'], '.rollingbanner');
+        createRollingBanner(['.right_side', '.rollingbannerwrap', '.bannerline','.bannerline2'], '.rollingbanner');
         //solution tab
         const tabLists = document.querySelectorAll('.tab_list a');
         const tabContents = document.querySelectorAll('.tab_content');

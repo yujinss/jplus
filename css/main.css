@@ -58,8 +58,8 @@ body{
 
 /* 공통 */
 .height1080 {height: 1080px; align-items: center;}
-.orangetxt {color: #F26A25;}
-.title {font-size: 48px;}
+.orangetxt {color: #F26A25; font-weight: 700;}
+.title {font-size: 48px; line-height: 1.2;}
 .stitle {font-size: 22px; color: #F26A25; font-weight: 400; margin-bottom: 56px;}
 .txt{font-size: 24px; font-weight: 500;}
 button[class$="_btn"] {border-radius: 40px; font-size: 24px; font-weight: 400; text-align: center; border: none; padding: 16px 78px; cursor: pointer;}
@@ -486,9 +486,6 @@ div[class^=aboutus_box] {
     font-weight: 300;
     line-height: 30px;
 }
-.business_box_active .innerbox_active .right_side .graybox p .orangetxt{
-    font-weight: 700;
-}
 .business_box_active .innerbox_active .right_side .graybox .notice_icon{
     background-color: #AECEEF;
     color: #1C6DC2;
@@ -554,8 +551,18 @@ div[class^=aboutus_box] {
 }
 .solution_box .tab_content .tab_inner .titleline{
     display: flex;
+    padding-bottom: 40px;
 }
-.solution_box .tab_content .tab_inner .bannerline{
+.solution_box .tab_content .tab_inner .titleline span{
+    font-size: 24px;
+    font-weight: 700;
+    border-left: 2px solid #F26A25;
+    padding: 0 62px 0 14px;
+}
+.solution_box .tab_content .tab_inner .bannerline + .titleline{
+    margin-top: 128px;
+}
+.solution_box .tab_content .tab_inner [class^="bannerline"]{
     display: flex;
 }
 .solution_box .tab_content .tab_inner .rollingbanner_ul{
@@ -563,13 +570,18 @@ div[class^=aboutus_box] {
     gap: 20px;
     margin-right: 20px;
 }
-.solution_box .tab_content .tab_inner .rollingbanner.original {
-	animation: rollingright1 33s linear infinite;
+.solution_box .tab_content .tab_inner .bannerline .rollingbanner.original {
+	animation: rollingright1 32s linear infinite;
 }
-.solution_box .tab_content .tab_inner .rollingbanner.clone {
-	animation: rollingright2 33s linear infinite;
+.solution_box .tab_content .tab_inner .bannerline .rollingbanner.clone {
+	animation: rollingright2 32s linear infinite;
 }
-
+.solution_box .tab_content .tab_inner .bannerline2 .rollingbanner.original {
+	animation: rollingright1 40s linear infinite;
+}
+.solution_box .tab_content .tab_inner .bannerline2 .rollingbanner.clone {
+	animation: rollingright2 40s linear infinite;
+}
 @keyframes rollingright1 {
     0% { transform: translateX(0); }
 	50% { transform: translateX(-100%); }
@@ -581,7 +593,28 @@ div[class^=aboutus_box] {
     0% { transition: translateX(0); }
 	100% { transform: translateX(-200%); }
 }
-
+.solution_box .tab_content .supportbox {
+    background-color: #FFFFFF;
+    border-radius: 40px;
+    width: 100%;
+    padding: 50px 60px;
+    color: #000000;
+}
+.solution_box .tab_content .supportbox + .supportbox{
+    margin-top: 30px;
+}
+.solution_box .tab_content .supportbox h3{ font-size: 30px; }
+.solution_box .tab_content .supportbox h3 + p{
+    font-size: 18px;
+    line-height: 1.7;
+    font-weight: 500;
+    padding: 16px 0;
+}
+.solution_box .tab_content .supportbox .annot{
+    color: #21558A;
+    font-size: 14px;
+    font-weight: 400;
+}
 /* 스와이퍼 */
 .swiper {
     width: 100%;
