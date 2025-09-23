@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JPLUS COMS</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="./css/main.css" type="text/css" />
+    <link rel="icon" href="./images/favicon.png">
+</head>
+<body>
+    <img src="./images/pre_icon.png">
+    <h1 class="preparation">준비중</h1>
+    <p>조금만 기다려주시면<br/> 멋진 홈페이지를 만나실 수 있으실 거예요</p>
+    <br/><br/>
+    <p><button id="pcurl">PC버전 보기</button>  </p>
+        
+    <script>
+        $(document).ready(function () {
+            $("#pcurl").click(function(){
+                location.href = "http://www.jpluscoms.com";
+            });
+        });    
+    </script>
+</body>
+<style scoped>
+    body{margin: 0 auto; text-align: center; margin-top: 15%; padding: 5%;} 
+    .preparation { color: #F26A25; font-size: 2.5em; margin: 10% 0;}
+    p {font-size: 2em; line-height: 1.5;}
+</style>
+</html>
