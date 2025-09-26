@@ -860,8 +860,8 @@ div[class^=aboutus_box] {
 }
 .swiper .swiper-slide .swiper-txtbox{
     position: absolute;
-    left: 90px;
-    top: 652px;
+    left: 4%;
+    top: 55%;
 }
 .swiper .swiper-slide .swiper-txtbox .btxt{
     font-size: 80px;
@@ -1005,30 +1005,53 @@ body{background: var(--bg); color: var(--text);}
 /* Fluid type helpers */
 .title-fluid{font-size: clamp(2.4rem, 6vw, 7.2rem); line-height: 1.15; font-weight: 800; letter-spacing: -0.02em;}
 .text-fluid{font-size: clamp(1.4rem, 2.4vw, 2.2rem); line-height: 1.5; font-weight: 500;}
+.aboutus_box3 .colorbox p{
+    width: 26vw;
+}
+
+.only-desktop { display: block; }
+.only-mobile { display: none; }
 
 /* Breakpoints: 1080 / 768 / 360 */
 @media (max-width: 1080px){
     :root{ --header-h: 64px; }
     #content {margin-top: 0px;}
-    .swiper .swiper-slide .swiper-txtbox{
-        position: absolute;
-        left: 4%;
-        top: 60%;
+
+    .only-desktop { display: none; }
+    .only-mobile { display: block; }
+
+    .swiper .swiper-slide .swiper-txtbox .btxt{
+        font-size: 7vw;
+        line-height: 10.5vh;
     }
-    .swiper .swiper-slide img{
-        object-fit: none;
+
+    .swiper .swiper-slide .swiper-txtbox .txt{
+        margin-top: 0px;
+        font-size: 2vw;
+        line-height: 2.5vh;
     }
+
     .swiper .swiper-pagination{
         bottom: 0px !important;
-        left: 6.6% !important;
+        left: 3.6% !important;
     }
+
+    .scollbox_wrap {
+        position: absolute;
+        left: -20vw;
+    }
+
     .scollbox_wrap .scroll-2{
         top: 11vh;
     }
 
     .scollbox_wrap .scroll-2 img{
-        width: 100vw;
-        height: 40vh;
+        width: 140vw;
+        height: 50vh;
+    }
+
+    div[class^=aboutus_box]{
+        padding-left: 2.5%;
     }
 
     .aboutus_box1{
@@ -1037,14 +1060,361 @@ body{background: var(--bg); color: var(--text);}
 
     .aboutus_box2 {
         display: block !important;
+        height: 150vh;
     }
+
+    .aboutus_box2 .title_box{
+        margin-bottom: 14vh;
+    }
+
+    .aboutus_box2 .image_box {
+        margin: 0;
+        height: 48vh;
+    }
+
+    .aboutus_box2 .content_box{
+        margin-top: 0px;
+    }
+
+    .aboutus_box2 .image_box img {
+        clip-path: inset(42% 0% 15% 0% round 40px);
+        position: relative;
+        top: -40vh;
+        width: 87vh;
+        height: 95vh;
+    }
+
+    .aboutus_box3{
+        margin-top: 21vh;
+        display: block !important;
+        height: 170vh;
+    }
+
+    .aboutus_box3 .content_box h2.title{
+        font-size: 58px;
+    }
+
+    .aboutus_box3 .content_box .txt{
+        font-size: 26px;
+    }
+
+    .aboutus_box3 .colorbox{
+        display: block !important;
+    }
+
+    .aboutus_box3 .colorbox .colorbox_og{
+        margin-bottom: 30px;
+    }
+
+    .aboutus_box3 .colorbox .colorbox_ny{
+        margin-bottom: 30px;
+    }
+
+    .aboutus_box3 .colorbox p{
+        color: var(--G_03, rgba(91, 91, 91, 1));
+        font-size: 42px;
+        font-weight: 300;
+        line-height: 63px;
+        letter-spacing: -1%;
+        text-align: left;
+        width: 88vw;
+    }
+
+    .aboutus_box3 .image_box{
+        background-image: 
+            url(../images/aboutus_04.png);
+        background-repeat: no-repeat;
+        margin-left: 0px;
+        margin-top: 8vh;
+        animation: none;
+        width: 92vw;
+    }
+
+    .history_box .swiper{
+        margin-left: 0px;
+    }
+
+    .history_box .swiper .swiper-wrapper .swiper-slide {
+        transition: none !important;  /* 애니메이션 제거 */
+    }
+
+    .history_box .swiper .swiper-wrapper .swiper-slide .title_box {
+        display: block;
+    }
+
+    .history_box .swiper .swiper-wrapper .swiper-slide .sub_title {
+        display: none;
+    }
+
+    .history_box .swiper .swiper-wrapper .swiper-slide:hover {
+        height: 100px !important;  /* 호버 시에도 원래 높이 유지 */
+        justify-content: flex-end !important;
+    }
+
+    .history_box .swiper .swiper-wrapper .swiper-slide:hover:after {
+        height: 0 !important;
+    }
+
+    .history_box .swiper .swiper-wrapper .swiper-slide ul {
+        color: var(--G_00, rgba(255, 255, 255, 1));
+        font-family: Pretendard;
+        font-size: 1.5em;
+        font-weight: 500;
+        line-height: 66px;
+        letter-spacing: -1%;
+        text-align: left;
+        margin: 20px 0 20px 45px;
+    }
+
+    .history_box .swiper .swiper-scrollbar{
+        display: none;
+    }
+
+    .history_box .swiper .swiper-wrapper .swiper-slide ul li {
+        line-height: 1.7;
+    }
+
+    .client_box {
+        padding: 0px 3.5% 0 4.5%;
+        display: block;
+        height: 150vh;
+    }
+
+    .client_box .title_box {
+        margin-bottom: 10vh;
+    }
+
+    .client_box .image_box{
+        margin-left: 0px;
+    }
+
+    #mobile_business {
+        width: 98vw;
+        height: 50vh;
+    }
+
+    #mobile_business .business_box{
+        display: block;
+    }
+
+    #mobile_business .business_box .innerbox{
+        height: 10vh;
+        padding: 0;
+        display: flex;
+        align-items: center;
+    }
+
+    #mobile_business .business_box .innerbox .title_box{
+        display: block;
+        display: flex;
+        align-items: center;
+        gap: 10vw;
+    }
+
+    #mobile_business .business_box .innerbox:hover{
+        background: none !important;
+        color: white;
+    }
+
+    #mobile_business .business_box .innerbox .title_box .stitle{
+        color: white;
+        font-weight: 200;
+        margin-bottom: 0;
+    }
+
+    #mobile_business .business_box .innerbox .title_box .title{
+        font-size: 42px;
+        font-weight: 400;
+    }
+
+      /* 비활성: 타이틀 보이기 */
+    #mobile_business .business_box_active .innerbox:not(.active) .click_title{
+        display: flex !important;
+    }
+    /* 활성: 타이틀 숨기기 */
+    #mobile_business .business_box_active .innerbox.active .click_title{
+        display: none !important;
+    }
+
+    #mobile_business .business_box_active .innerbox .innerbox_active{
+        width: 100%;
+        display: block;           /* 블록으로 유지 */
+        max-height: 0;            /* 접힌 상태 */
+        overflow: hidden;
+        transition: max-height 0.35s ease;
+        margin: 0;
+        padding: 0 20px;          /* 펼쳤을 때 안여백 느낌 유지용 */
+        box-sizing: border-box;
+    }
+    
+      /* 타이틀 행 구성 (위에 고정) */
+    #mobile_business .business_box_active .innerbox .click_title{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        padding: 14px 20px;
+        margin: 0;
+        transform: none;
+        white-space: nowrap;
+    }
+    
+      /* 펼쳤을 때(active): 내용 펼치기 */
+    #mobile_business .business_box_active .innerbox.active .innerbox_active{
+        max-height: 2000px;
+        padding: 60px 100px 0 40px;
+    }
+    
+      /* 펼쳤을 때: 타이틀 아래로 내용이 오도록 (column) */
+    #mobile_business .business_box_active .innerbox{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+        border-radius: 0;
+    }
+    
+      /* 비활성 아이템은 내용 접힘 유지 */
+    #mobile_business .business_box_active .innerbox:not(.active) .innerbox_active{
+        max-height: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    
+      /* 호버 영향 제거(모바일) */
+    #mobile_business .business_box_active .innerbox:hover{
+        background: none !important;
+        color: inherit;
+    }
+
+    #mobile_business .business_box_active{
+        display: none;       /* 필요 시 */
+        height: auto !important;
+        overflow: visible !important;
+        margin: 0;            /* 양옆 마진으로 폭이 줄면 제거 */
+    }
+    
+      /* 카드들(아이템)도 흐름대로 쌓이게 */
+    #mobile_business .business_box_active .innerbox{
+        width: 100%;
+        margin: 0 !important;
+    }
+    
+      /* 펼쳐지는 내용(아코디언)은 접힘/펼침만 제어 */
+    #mobile_business .business_box_active .innerbox .innerbox_active{
+        display: block;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height .35s ease;
+    }
+    #mobile_business .business_box_active .innerbox.active .innerbox_active{
+        max-height: 2000px; /* 충분히 크게 */
+    }
+
+    #mobile_business .business_box_active .innerbox .innerbox_active .left_side .txt {
+        width: 88vw;
+        height: 10vh;
+        font-weight: 300;
+    }
+
+    #mobile_business .business_box_active .innerbox .innerbox_active .left_side a button{
+        margin-top: 40px;
+    }
+
+    #mobile_business .business_box_active .innerbox .innerbox_active .left_side{
+        margin-bottom: 5vh;
+    }
+
+    #mobile_business .business_box_active .innerbox .title_box .title + p{
+        width: 60vw;
+    }
+
+    #mobile_business .business_box_active .innerbox .innerbox_active .right_side{
+        width: 100%;
+    }
+
+    #mobile_business .business_box_active .innerbox .innerbox_active .right_side .rollingbanner_ul li img{
+        width: 80vw;
+    }
+
+    .solution_box{
+        height: 150vh;
+        padding: 0 3.5% 0 4.5%;
+    }
+
+    .career_box{
+        height: 300vh;
+        padding: 0 3.5% 0 4.5%;
+    }
+
+    .talent_box .hoverdiv {
+        display: block !important;
+    }
+    
+    .talent_box .defaultdiv {
+        display: none !important;
+    }
+    
+    .talent_box:not(.always) {
+        background-color: #F1F4F9 !important;
+    }
+
+    /*
+    #mobile_business .business_box_active {
+        display: block;
+        width: 100%;
+    }
+
+    #mobile_business .business_box_active .innerbox{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #mobile_business .business_box_active .innerbox.active .click_title {
+        display: flex !important;
+    }
+
+    #mobile_business .business_box_active .click_title {
+        transform: none;
+        transform-origin: initial;
+        width: 100%;
+        height: auto;
+        margin: 0 0 24px 0;
+        padding: 16px 0;
+        white-space: normal;
+        justify-content: center;
+        align-items: center;
+      }
+
+    #mobile_business .business_box_active .innerbox .innerbox_active{
+        display: block;
+        padding: 60px 100px 0 40px;
+    }
+
+    #mobile_business .business_box_active .innerbox .innerbox_active .left_side {
+        height: 60vh;
+    }
+
+    #mobile_business .business_box_active .innerbox .innerbox_active .left_side .txt {
+        height: 225px;
+    }
+
+    #mobile_business .business_box_active .innerbox .innerbox_active .left_side a button{
+        margin-top: 40px;
+    }
+    */
+
 }
 @media (max-width: 768px){
     :root{ --side-padding: 6%; }
+    .scollbox_wrap .scroll-2{
+        top: 11vh;
+    }
+
+    .scollbox_wrap .scroll-2 img{
+        width: 140vw;
+        height: 50vh;
+    }
 }
 @media (max-width: 360px){
     :root{ --side-padding: 7%; }
 }
-
-.only-desktop { display: block; }
-.only-mobile { display: none; }

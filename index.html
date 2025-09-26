@@ -78,7 +78,10 @@
                             <img src="./images/aboutus_icon_03.png">
                         </div>
                     </div>
-                    <div class="image_box"><img src="./images/aboutus_01.png"></div>
+                    <div class="image_box">
+                        <img src="./images/aboutus_01.png" class="only-desktop">
+                        <img src="./images/mobile_aboutus_01.png" class="only-mobile">
+                    </div>
                     <div class="content_box">
                         <ul>
                             <li>
@@ -110,14 +113,14 @@
                             <span class="orangetxt">J</span>OYFUL, <span class="orangetxt">J</span>OIN US + <span class="orangetxt">C</span>OMMUNICATIONS 
                         </h2>
                         <p class="txt">JOYFUL, JOIN US 의 앞 글자인 J 두개를 J  plus로 형상화 하고, <br/>
-                        파트간의 소통을 중요시하는 Communications을 coms로 표현
+                            파트간의 소통을 중요시하는 Communications을 coms로 표현
                         </p>
                         <div class="colorbox">
                             <div class="colorbox_og">
                                 PANTON <span>172C</span>
                             </div>
                             <p>
-                                주황은 태양 색으로 타인에 대한 배려와 사려 깊음을 나타내는 <br/>제이플러스컴즈가 지키고자 하는 기업 문화입니다.
+                                주황은 태양 색으로 타인에 대한 배려와 사려 깊음을 나타내는 제이플러스컴즈가 지키고자 하는 기업 문화입니다.
                             </p>
                         </div>
                         <div class="colorbox">
@@ -125,7 +128,7 @@
                                 PANTON <span>2766C</span>
                             </div>
                             <p>
-                                남색은 무지개 색 중 두드러지는 색은 아니나 안정과 신뢰를 주는 컬러로 <br/> 제이플러스컴즈가 보이고자하는 기업 신뢰입니다. 
+                                남색은 무지개 색 중 두드러지는 색은 아니나 안정과 신뢰를 주는 컬러로 제이플러스컴즈가 보이고자하는 기업 신뢰입니다. 
                             </p>
                         </div>
                     </div>
@@ -278,13 +281,13 @@
                     </div>
                 </div>
             </div>
-            <div id="business">
+            <div id="business" class="only-desktop">
                 <div class="business_box" id="btnDefault">
                     <div class="innerbox si">
                         <div class="title_box">
                             <p class="stitle">BUSINESS</p>
                             <h2 class="title">SI & SM</h2>
-                            <p>System Integration & System<br/>Maintenance</p>
+                            <p>System Integration & System <br/> Maintenance</p>
                         </div>
                         <p class="txt">
                             고객의 요구사항과 다양한 환경에 맞춘<br/>
@@ -477,6 +480,180 @@
                     
                 </div>
             </div>
+
+            <div id="mobile_business" class="only-mobile">
+                <div class="business_box" id="mobile_btnDefault">
+                    <div class="innerbox si" onclick='toggleDiv(1)'>
+                        <div class="title_box">
+                            <p class="stitle">BUSINESS</p>
+                            <h2 class="title">SI & SM</h2>
+                        </div>
+                    </div>
+                    <div class="innerbox mo" onclick='toggleDiv(2)'>
+                        <div class="title_box">
+                            <p class="stitle">BUSINESS</p>
+                            <h2 class="title">MOBILE COUPON</h2>
+                        </div>
+                    </div>
+                    <div class="innerbox mo" onclick='toggleDiv(3)'>
+                        <div class="title_box">
+                            <p class="stitle">BUSINESS</p>
+                            <h2 class="title">MOBILE ACC</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="business_box_active" id="mobile_btnActive">
+                    <div class="innerbox si" id="mobile_div1"> 
+                        <div class="click_title" onclick='toggleDiv(1)'>
+                            <p class="stitle">BUSINESS</p>
+                            <p>SI & SM</p>
+                        </div>
+                        <div class="innerbox_active">
+                            <div class="left_side">
+                                <div class="title_box">
+                                    <p class="stitle">BUSINESS</p>
+                                    <h2 class="title">SI & SM</h2>
+                                    <p>System Integration & System Maintenance</p>
+                                </div>
+                                <p class="txt">
+                                    고객의 요구사항과 다양한 환경에 맞춘
+                                    커스텀 개발로 고객의 만족을 최상으로
+                                    높여줄 시스템을 구축합니다.
+                                    시스템을 편리하고 안정적으로 사용할 수
+                                    있도록 지원합니다.
+                                </p>
+                                <a href="mailto:jpluscoms.com"><button class="inquiry_btn">문의하기</button></a>
+                            </div>
+                            <div class="right_side">
+                                <div class="rollingbanner">
+                                    <ul class="rollingbanner_ul">
+                                        <li>
+                                            <img src="./images/business_si_01.png">
+                                        </li>
+                                        <li>
+                                            <img src="./images/business_si_02.png">
+                                        </li>
+                                        <li>
+                                            <img src="./images/business_si_03.png">
+                                        </li>
+                                        <li>
+                                            <img src="./images/business_si_04.png">
+                                        </li>
+                                        <li>
+                                            <img src="./images/business_si_05.png">
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="innerbox mo" id="mobile_div2">
+                        <div class="click_title" onclick='toggleDiv(2)'>
+                            <p class="stitle">BUSINESS</p>
+                            <p>MOBILE COUPON</p>
+                        </div>
+                        <div class="innerbox_active">
+                            <div class="left_side">
+                                <div class="title_box">
+                                    <p class="stitle">BUSINESS</p>
+                                    <h2 class="title">MOBILE COUPON</h2>
+                                    <p>SERVICE & SOLUTION</p>
+                                </div>
+                                <p class="txt">
+                                    검증된 보유 솔루션 기술을 활용하여 
+                                    고객의니즈<br/>에 가장 적합하고 
+                                    합리적인 모바일 쿠폰 시스템을 구축, 
+                                    제공합니다. <br/>
+                                    B2B, B2C 시장에서 홍보, 
+                                    고객관리 등 대상과 목적에 따라 
+                                    다양하게 활용 가능합니다.
+                                </p>
+                                <a href="mailto:jpluscoms.com"><button class="inquiry_btn">문의하기</button></a>
+                            </div>
+                            <div class="right_side">
+                                <div class="graybox rep">
+                                    <h4>모바일 상품권 솔루션 레퍼런스</h4>
+                                    <p>
+                                        <span class="orangetxt">2006</span>&nbsp;SKT ‘기프티콘’ 서비스 개발<br/>
+                                        <span class="orangetxt">2008</span>&nbsp;KTH ‘하트콘’ 시스템 개발<br/>
+                                        <span class="orangetxt">2009</span>&nbsp;롯데닷컴 e쿠폰 시스템 개발<br/>
+                                        <span class="orangetxt">2010</span>&nbsp;롯데 면세점 모바일 바코드 메시징 시스템 개발<br/>
+                                        <span class="orangetxt">2012</span>&nbsp;㈜즐거운 ‘스마일콘’ 서비스 개발<br/>
+                                        <span class="orangetxt">2013</span>&nbsp;㈜기프트엔 모바일 상품권 서비스 개발<br/>
+                                        <span class="orangetxt">2014</span>&nbsp;㈜한국스마트카드 ‘티머니페이’ 개발<br/>
+                                        <span class="orangetxt">2015</span>&nbsp;㈜오즈엠앤씨 모바일 상품권 시스템 개발<br/>
+                                        <span class="orangetxt">2016</span>&nbsp;㈜포인트 허브 모바일 상품권 시스템 개발<br/>
+                                        <span class="orangetxt">2018</span>&nbsp;롯데정보통신 모바일 상품권 시스템 개발
+                                    </p>
+                                </div>
+                                <div class="graybox wal">
+                                    <h4>모바일 쿠폰 지갑 
+                                        <span class="notice_icon">서비스 예정</span>
+                                    </h4>
+                                    <p>
+                                        문자 또는 카카오톡으로 수신한 모바일 상품쿠폰을 보관, 관리할 수 있는 모바일 쿠폰 지갑 서비스입니다. 생성형AI를 활용한 JPC의<br/>
+                                        모바일 쿠폰 선물하기를 통해서 보유한 쿠폰을 지인에게 선물할 수 있습니다. 또한 서비스 내 가족 공유함을 활용하여 가족이 보유한 <br/>
+                                        쿠폰을 함께 관리하는 서비스입니다.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="innerbox acc" id="mobile_div3"> 
+                        <div class="click_title" onclick='toggleDiv(3)'>
+                            <p class="stitle">BUSINESS</p>
+                            <p>MOBILE ACC</p>
+                        </div>
+                        <div class="innerbox_active">
+                            <div class="left_side">
+                                <div class="title_box">
+                                    <p class="stitle">BUSINESS</p>
+                                    <h2 class="title">MOBILE ACC</h2>
+                                </div>
+                                <p class="txt">
+                                    모바일 액세서리 제작, 판매 및 마케팅 
+                                    대행으로 제작부터 오프라인 굿즈
+                                    스토어까지 고객이 필요로 하는 모든 것과
+                                    함께합니다.
+                                </p>
+                                <a href="mailto:jpluscoms.com"><button class="inquiry_btn">문의하기</button></a>
+                            </div>
+                            <div class="right_side rollingbannerwrap">
+                                <div class="rollingbanner">
+                                    <ul class="rollingbanner_ul">
+                                        <div>
+                                            <li>
+                                                <img src="./images/business_acc_01.png">
+                                            </li>
+                                            <li>
+                                                <img src="./images/business_acc_02.png">
+                                            </li>
+                                            <li>
+                                                <img src="./images/business_acc_03.png">
+                                            </li>
+                                            <li>
+                                                <img src="./images/business_acc_04.png">
+                                            </li>
+                                        </div>
+                                       <div>
+                                            <li>
+                                                <img src="./images/business_acc_05.png">
+                                            </li>
+                                            <li>
+                                                <img src="./images/business_acc_06.png">
+                                            </li>
+                                            <li>
+                                                <img src="./images/business_acc_07.png">
+                                            </li>
+                                       </div>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div id="solution" class="solution_box">
                 <div class="title_box">
                     <p class="stitle">SOLUTION</p>
@@ -774,22 +951,13 @@
             return mobileRegex.some(mobile => agent.match(mobile));
         }
 
-        // const isMobile = detectMobileDevice(window.navigator.userAgent);
-        const isMobile = true;
-
-        if (isMobile) {
-            console.log('current device is mobile');
-            $('.only-desktop').hide();
-            $('.only-mobile').show();
-        } else {
-            console.log('current device is not mobile');
-            $('.only-desktop').show();
-            $('.only-mobile').hide();
-        }
+        const isMobile = window.innerWidth <= 1080;
+        // const isMobile = true;
 
         // Start the slider when the page is loaded
         window.onload = startSlider;
         // main swiper 
+        /*
         var swiper = new Swiper("#home .swiper", {
             slidesPerView: 1,
             spaceBetween: 0,
@@ -805,11 +973,10 @@
                 clickable: true
             },
         });
+        */
+       
         // about us
         window.addEventListener('scroll', () => {
-            if(isMobile){
-                return;
-            }
             const scrollY = window.scrollY; 
             const scroll1 = document.querySelector('.scroll-1');
             const scroll2 = document.querySelector('.scroll-2');
@@ -820,14 +987,43 @@
             const opacityValue = Math.max(1 - (scrollY / (sectionHeight - 200 )), 0.5); 
             scroll1.style.opacity = opacityValue;
         });
+
+        // 반응형 슬라이드 개수 계산 함수
+        function getSlidesPerView() {
+            const width = window.innerWidth;
+            if (width <= 1080) {
+                return 1; // 모바일
+            }else {
+                return 3; // 데스크톱
+            }
+        }
+
+        let perView = getSlidesPerView();
+
         // history swiper
         var swiper = new Swiper(".mySwiper", {
-            slidesPerView: 3,
+            slidesPerView: perView,
             grabCursor: true,
+            allowTouchMove: true,
             scrollbar: {
                 el: ".swiper-scrollbar"
-            },
+            }
         });
+
+        // 창 크기 변경 감지 및 Swiper 업데이트
+        let resizeTimeout;
+        window.addEventListener('resize', function() {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(function() {
+                const newPerView = getSlidesPerView();
+                if (swiper && newPerView !== perView) {
+                    perView = newPerView;
+                    swiper.params.slidesPerView = perView;
+                    swiper.update();
+                }
+            }, 250); // 디바운싱으로 성능 최적화
+        });
+
         // client slider
         const images = document.querySelectorAll('.slider');
         var i = 0;
@@ -872,26 +1068,66 @@
         });
         //business more button
         function toggleDiv(index) {
-            const activediv = document.getElementById('btnActive');
-            const defaultdiv = document.getElementById('btnDefault');
-            const targetDiv = document.getElementById('div' + index); 
+
+            let activediv, defaultdiv, targetDiv;
+
+            if(isMobile){
+
+
+
+                activediv = document.getElementById('mobile_btnActive');
+                defaultdiv = document.getElementById('mobile_btnDefault');
+                targetDiv = document.getElementById('mobile_div' + index); 
+
+                setTimeout(function(){
+                    if(activediv.style.display === 'none') {
+                        defaultdiv.style.display = 'flex';
+                        activediv.style.display = 'none';
+                        targetDiv.classList.remove('active');
+                    }else {
+                        defaultdiv.style.display = 'none';
+                        activediv.style.display = 'block';
+
+                        document.getElementById('mobile_div' + 1).classList.remove('active');
+                        document.getElementById('mobile_div' + 2).classList.remove('active');
+                        document.getElementById('mobile_div' + 3).classList.remove('active');
+                        
+                        targetDiv.classList.add('active'); 
+                    }   
+                }, 100);
+
+
+
+            }else{
+                activediv = document.getElementById('btnActive');
+                defaultdiv = document.getElementById('btnDefault');
+                targetDiv = document.getElementById('div' + index); 
+
+                setTimeout(function(){
+                    if(activediv.style.display === 'none') {
+                        defaultdiv.style.display = 'flex';
+                        activediv.style.display = 'none';
+                        targetDiv.classList.remove('active');
+                    }else {
+                        defaultdiv.style.display = 'none';
+                        activediv.style.display = 'flex';
+
+                        document.getElementById('div' + 1).classList.remove('active');
+                        document.getElementById('div' + 2).classList.remove('active');
+                        document.getElementById('div' + 3).classList.remove('active');
+                        
+                        targetDiv.classList.add('active'); 
+                    }   
+                }, 100);
+            }
 
             setTimeout(function(){
-                if(activediv.style.display === 'none') {
-                    defaultdiv.style.display = 'flex';
-                    activediv.style.display = 'none';
-                    targetDiv.classList.remove('active');
-                }else {
-                    defaultdiv.style.display = 'none';
-                    activediv.style.display = 'flex';
-
-                    document.getElementById('div' + 1).classList.remove('active');
-                    document.getElementById('div' + 2).classList.remove('active');
-                    document.getElementById('div' + 3).classList.remove('active');
-                    
-                    targetDiv.classList.add('active'); 
-                }   
-            }, 100)
+    // 펼친 뒤 재배치 (필요 시)
+    createRollingBannerVertical(
+      ['#mobile_div' + index + ' .right_side', '#mobile_div' + index + ' .rollingbannerwrap'],
+      '.rollingbanner'
+    );
+  }, 150);
         }
         //business RollingBanner
         function createRollingBanner(containerSelectors, bannerSelector) {
@@ -910,6 +1146,32 @@
                 clone.classList.add('clone');
             });
         }
+
+        function createRollingBannerVertical(containerSelectors, bannerSelector){
+  containerSelectors.forEach((containerSelector, index) => {
+    const container = document.querySelector(containerSelector);
+    if (!container) return;
+    const roller = container.querySelector(bannerSelector);
+    if (!roller) return;
+
+    // 중복 방지
+    if (roller.classList.contains('original')) return;
+
+    roller.classList.add('original');
+    const clone = roller.cloneNode(true);
+    clone.classList.add('clone');
+    container.appendChild(clone);
+
+    const place = () => {
+      const list = roller.querySelector('ul');
+      const h = list ? list.offsetHeight : roller.offsetHeight;
+      if (!h) { requestAnimationFrame(place); return; }
+      roller.style.top = '0px';
+      clone.style.top = h + 'px';
+    };
+    place();
+  });
+}
 
         // 사용 예시: 각 클래스에 대해 createRollingBanner 호출
         createRollingBanner(['.right_side', '.rollingbannerwrap', '.bannerline','.bannerline2'], '.rollingbanner');
@@ -944,6 +1206,13 @@
                 location.href = "http://gw.jpluscoms.com";
             });
         });
+
+        window.addEventListener('load', function(){
+  createRollingBannerVertical(
+    ['#mobile_div1 .right_side', '#mobile_div2 .right_side', '#mobile_div3 .rollingbannerwrap'],
+    '.rollingbanner'
+  );
+});
     </script>
 </body>
 </html>
