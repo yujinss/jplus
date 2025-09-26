@@ -1020,6 +1020,14 @@ body{background: var(--bg); color: var(--text);}
     .only-desktop { display: none; }
     .only-mobile { display: block; }
 
+    .title{
+        font-size: 5vw;
+    }
+
+    .stitle{
+        font-size: 4vw;
+    }
+
     .swiper .swiper-slide .swiper-txtbox .btxt{
         font-size: 7vw;
         line-height: 10.5vh;
@@ -1056,11 +1064,13 @@ body{background: var(--bg); color: var(--text);}
 
     .aboutus_box1{
         height: 85vh;
+        min-height: 100vh;
     }
 
     .aboutus_box2 {
         display: block !important;
-        height: 150vh;
+        min-height: 150vh;
+        height: auto;
     }
 
     .aboutus_box2 .title_box{
@@ -1087,15 +1097,13 @@ body{background: var(--bg); color: var(--text);}
     .aboutus_box3{
         margin-top: 21vh;
         display: block !important;
-        height: 170vh;
+        min-height: 170vh;
+        height: auto;
     }
 
-    .aboutus_box3 .content_box h2.title{
-        font-size: 58px;
-    }
 
     .aboutus_box3 .content_box .txt{
-        font-size: 26px;
+        font-size: clamp(16px, 3vw, 26px);
     }
 
     .aboutus_box3 .colorbox{
@@ -1112,7 +1120,7 @@ body{background: var(--bg); color: var(--text);}
 
     .aboutus_box3 .colorbox p{
         color: var(--G_03, rgba(91, 91, 91, 1));
-        font-size: 42px;
+        font-size: clamp(34px, 6vw, 42px);
         font-weight: 300;
         line-height: 63px;
         letter-spacing: -1%;
@@ -1128,6 +1136,7 @@ body{background: var(--bg); color: var(--text);}
         margin-top: 8vh;
         animation: none;
         width: 92vw;
+        background-size: contain;
     }
 
     .history_box .swiper{
@@ -1177,7 +1186,8 @@ body{background: var(--bg); color: var(--text);}
     .client_box {
         padding: 0px 3.5% 0 4.5%;
         display: block;
-        height: 150vh;
+        min-height: 175vh;
+        height: auto;
     }
 
     .client_box .title_box {
@@ -1190,7 +1200,8 @@ body{background: var(--bg); color: var(--text);}
 
     #mobile_business {
         width: 98vw;
-        height: 50vh;
+        min-height: 50vh;
+        height: auto;
     }
 
     #mobile_business .business_box{
@@ -1223,8 +1234,9 @@ body{background: var(--bg); color: var(--text);}
     }
 
     #mobile_business .business_box .innerbox .title_box .title{
-        font-size: 42px;
         font-weight: 400;
+        font-size: 8vw;
+        white-space: nowrap;
     }
 
       /* 비활성: 타이틀 보이기 */
@@ -1337,12 +1349,14 @@ body{background: var(--bg); color: var(--text);}
     }
 
     .solution_box{
-        height: 150vh;
+        min-height: 170vh;
+        height: auto;
         padding: 0 3.5% 0 4.5%;
     }
 
     .career_box{
-        height: 300vh;
+        min-height: 300vh;
+        height: auto;
         padding: 0 3.5% 0 4.5%;
     }
 
@@ -1413,6 +1427,47 @@ body{background: var(--bg); color: var(--text);}
     .scollbox_wrap .scroll-2 img{
         width: 140vw;
         height: 50vh;
+    }
+
+    .career_box .talent_wrap .talent_box.ideal{
+        width: 41vw;
+        min-width: 40vw;
+        flex-shrink: 0; /* 축소 방지 */
+    }
+
+    .career_box .talent_wrap .talent_box.common{
+        width: 43vw;
+    }
+
+    .career_box .talent_wrap .talent_box.always{
+
+    }
+
+    .career_box .talent_wrap .talent_box.joining{
+
+    }
+
+    .career_box .talent_wrap .talent_box .hoverdiv::after{
+        background-size: contain !important;
+        width: 10vw;
+        right: 2vw;
+        bottom: 2vh;
+    }
+
+    .career_box .talent_wrap .talent_box .hoverdiv::after{
+        background-size: contain;
+        width: 10vw;
+        right: 2vw;
+        bottom: 2vh;
+    }
+
+    .career_box .talent_wrap .talent_box .hoverdiv p:not(.annot){
+        font-size: clamp(15px, 3vw, 40px);
+        
+    }
+
+    .career_box .talent_wrap .talent_box.always p{
+        font-size: clamp(20px, 5vw, 40px);
     }
 }
 @media (max-width: 360px){
