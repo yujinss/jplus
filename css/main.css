@@ -1172,7 +1172,7 @@ body{background: var(--bg); color: var(--text);}
         line-height: 66px;
         letter-spacing: -1%;
         text-align: left;
-        margin: 20px 0 20px 45px;
+        margin: 20px 11px 20px 45px;
     }
 
     .history_box .swiper .swiper-scrollbar{
@@ -1181,6 +1181,7 @@ body{background: var(--bg); color: var(--text);}
 
     .history_box .swiper .swiper-wrapper .swiper-slide ul li {
         line-height: 1.7;
+        white-space: unset;
     }
 
     .client_box {
@@ -1196,6 +1197,10 @@ body{background: var(--bg); color: var(--text);}
 
     .client_box .image_box{
         margin-left: 0px;
+    }
+
+    .history_box .swiper {
+        width: 100vw;
     }
 
     #mobile_business {
@@ -1439,12 +1444,8 @@ body{background: var(--bg); color: var(--text);}
         width: 43vw;
     }
 
-    .career_box .talent_wrap .talent_box.always{
-
-    }
-
-    .career_box .talent_wrap .talent_box.joining{
-
+    .history_box .swiper .swiper-wrapper .swiper-slide ul li{
+        font-size: 4vw;
     }
 
     .career_box .talent_wrap .talent_box .hoverdiv::after{
@@ -1469,7 +1470,54 @@ body{background: var(--bg); color: var(--text);}
     .career_box .talent_wrap .talent_box.always p{
         font-size: clamp(20px, 5vw, 40px);
     }
+
+    .contact_box .contact_content_wrap .contact_content_box ul li{
+        width: 100%;
+    }
+
+    .contact_box .contact_content_wrap .contact_content_box ul li b{
+        display: block;
+    }
+
+    .contact_box{
+        display: block;
+    }
+
+    .contact_box .logo_wrap span {
+        padding: 3% 0;
+    }
+
+    .contact_box .logo_wrap {
+        margin-bottom: 10px;
+    }
+
 }
+
+@media (max-width: 470px){
+    :root{ --side-padding: 7%; }
+
+    #home .swiper .swiper-slide .swiper-txtbox .btxt{
+        line-height: 5.5vh;
+    }
+
+    #home .swiper .swiper-slide .swiper-txtbox .txt{
+        line-height: 1.7vh;
+    }
+
+    .career_box .talent_wrap .talent_box{
+        height: 29vh;
+    }
+
+    .career_box .talent_wrap .talent_box.common{
+        width: 42vw;
+    }
+
+    .career_box .talent_wrap .talent_box.always{
+        padding: 125px 0 0 44px;
+    }
+
+}
+
 @media (max-width: 360px){
     :root{ --side-padding: 7%; }
 }
