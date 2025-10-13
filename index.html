@@ -1024,6 +1024,9 @@
                     swiper.update();
                 }
             }, 250); // 디바운싱으로 성능 최적화
+
+            wrapTalentBoxes();
+
         });
 
         // client slider
@@ -1061,6 +1064,37 @@
             clearInterval(intervalId);
             intervalId = null;
         }
+
+        function wrapTalentBoxes() {
+            const commonBox = document.querySelector('.talent_box.common');
+            const alwaysBox = document.querySelector('.talent_box.always');
+            
+            if (window.innerWidth <= 768) {
+                // 이미 감싸져 있는지 확인
+                if (!commonBox.parentElement.classList.contains('talent-wrapper')) {
+                    // 새로운 div 생성
+                    const wrapper = document.createElement('div');
+                    wrapper.classList.add('talent-wrapper');
+                    
+                    // common 박스 앞에 wrapper 삽입
+                    commonBox.parentElement.insertBefore(wrapper, commonBox);
+                    
+                    // wrapper에 두 박스 추가
+                    wrapper.appendChild(commonBox);
+                    wrapper.appendChild(alwaysBox);
+                }
+            } else {
+                // 470 이상이면 다시 풀기
+                const wrapper = document.querySelector('.talent-wrapper');
+                if (wrapper) {
+                    const parent = wrapper.parentElement;
+                    parent.insertBefore(commonBox, wrapper);
+                    parent.insertBefore(alwaysBox, wrapper);
+                    wrapper.remove();
+                }
+            }
+        }
+
         document.addEventListener('visibilitychange', () => {
             if (document.visibilityState === 'hidden') {
                 stopSlider(); // 페이지가 보이지 않을 때 슬라이더 중지
@@ -1210,11 +1244,13 @@
         });
 
         window.addEventListener('load', function(){
-  createRollingBannerVertical(
-    ['#mobile_div1 .right_side', '#mobile_div2 .right_side', '#mobile_div3 .rollingbannerwrap'],
-    '.rollingbanner'
-  );
-});
+            createRollingBannerVertical(
+                ['#mobile_div1 .right_side', '#mobile_div2 .right_side', '#mobile_div3 .rollingbannerwrap'],
+                '.rollingbanner'
+            );
+
+            wrapTalentBoxes();
+        });
     </script>
 </body>
 </html>

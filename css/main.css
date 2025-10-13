@@ -1491,6 +1491,45 @@ body{background: var(--bg); color: var(--text);}
         margin-bottom: 10px;
     }
 
+    .talent-wrapper{
+        display: flex;
+    }
+
+    .career_box .talent_wrap .talent_box.ideal{
+        width: 91vw;
+    }
+
+    .career_box .talent_wrap .talent_box.always{
+        height: 100%;
+    }
+
+    .career_box .talent_wrap .talent_box.always::before {
+        left: 24%;
+        top: 20%;
+    }
+
+    .career_box .talent_wrap .talent_box.always::after {
+        left: 24%;
+        top: 20%;
+    }
+
+    .career_box .talent_wrap .talent_box.always {
+        padding: 80px 0 0 57px;
+    }
+
+    .career_box .talent_wrap .talent_box.joining{
+        width: 91vw;
+        height: 25vh;
+    }
+
+    .career_box {
+        min-height: 330vh;
+    }
+
+    .solution_box {
+        min-height: 120vh;
+    }
+
 }
 
 @media (max-width: 470px){
@@ -1504,17 +1543,22 @@ body{background: var(--bg); color: var(--text);}
         line-height: 1.7vh;
     }
 
+    .career_box {
+        min-height: 350vh;
+    }
+
     .career_box .talent_wrap .talent_box{
-        height: 29vh;
+        height: 25vh;
     }
 
     .career_box .talent_wrap .talent_box.common{
         width: 42vw;
     }
 
-    .career_box .talent_wrap .talent_box.always{
-        padding: 125px 0 0 44px;
+    .solution_box {
+        min-height: 110vh;
     }
+
 
 }
 
