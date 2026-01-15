@@ -219,3 +219,5 @@ node_env/
 
 # Claude Code MCP settings (contains API tokens)
 .claude/mcp.json
+
+node_modules/
