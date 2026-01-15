@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JPLUS COMS</title>
-    <link rel="stylesheet" href="./css/main.css" type="text/css" />
+    <link rel="stylesheet" href="./css/main.css?v=2" type="text/css" />
     <link rel="icon" href="./images/favicon.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
@@ -823,7 +823,7 @@
                         <div class="hoverdiv">
                             <span>합류여정</span>
                             <p>
-                                <span class="orangetxt">진행 방식</span> 서류 전형 <sapn class="graytxt">></sapn> 실무 인터뷰 <sapn class="graytxt">></sapn> 경영진 인터뷰 <sapn class="graytxt">></sapn> 최종 합격 <br/>
+                                <span class="orangetxt">진행 방식</span> 서류 전형 <span class="graytxt">></span> 실무 인터뷰 <span class="graytxt">></span> 경영진 인터뷰 <span class="graytxt">></span> 최종합격 <br/>
                                 <span class="orangetxt">지원 방법</span> jpluscoms@jpluscoms.com
                             </p>
                             <p class="annot">
@@ -958,9 +958,8 @@
 
         // Start the slider when the page is loaded
         window.onload = startSlider;
-        // main swiper 
-        /*
-        var swiper = new Swiper("#home .swiper", {
+        // main swiper
+        var mainSwiper = new Swiper("#home .swiper", {
             slidesPerView: 1,
             spaceBetween: 0,
             effect: "fade",
@@ -975,7 +974,6 @@
                 clickable: true
             },
         });
-        */
        
         // about us
         window.addEventListener('scroll', () => {

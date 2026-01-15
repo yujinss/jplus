@@ -72,3 +72,6 @@ Tab navigation uses `data-tab` attributes to link tabs with content panels.
 - Section height: 1080px (`.height1080` class)
 - Max width: 1920px
 - No CSS variables - all values hardcoded
+
+## Language
+Please respond in Korean.

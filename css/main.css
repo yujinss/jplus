@@ -55,14 +55,15 @@ body{
     font-size: 18px;
     width: 100%;
     overflow: hidden;
+    margin: 0 auto;
 }
 
 /* 공통 */
-.height1080 {height: 1080px; align-items: center;}
+.height1080 {min-height: 100vh; align-items: center;}
 .orangetxt {color: #F26A25; font-weight: 700;}
-.title {font-size: 48px; line-height: 1.2;}
-.stitle {font-size: 22px; color: #F26A25; font-weight: 400; margin-bottom: 56px;}
-.txt{font-size: 24px; font-weight: 500;}
+.title {font-size: clamp(28px, 5vw, 48px); line-height: 1.2;}
+.stitle {font-size: clamp(16px, 3vw, 22px); color: #F26A25; font-weight: 400; margin-bottom: clamp(24px, 5vw, 56px);}
+.txt{font-size: clamp(16px, 2.5vw, 24px); font-weight: 500;}
 button[class$="_btn"] {border-radius: 40px; font-size: 24px; font-weight: 400; text-align: center; border: none; padding: 16px 78px; cursor: pointer;}
 .annot{ color: #21558A; font-size: 14px; font-weight: 400;}
 h4{font-size: 22px;}
@@ -100,8 +101,10 @@ h4{font-size: 22px;}
 
 div[class^=aboutus_box] {
     padding-left: 13.5%;
+    padding-right: clamp(16px, 5vw, 13.5%);
     width: 100%;
     display: inline-flex;
+    justify-content: center;
 }
 .aboutus_box1{
     position: relative;
@@ -133,7 +136,7 @@ div[class^=aboutus_box] {
     padding-right: 10%;
 }
 .aboutus_box2 .image_box{
-    margin: 0 50px 0 113px;
+    margin: 0 clamp(20px, 4vw, 50px) 0 clamp(40px, 8vw, 113px);
 }
 .aboutus_box2 .content_box{
     margin-top: 30%;
@@ -147,12 +150,12 @@ div[class^=aboutus_box] {
     margin-top: 17px;
 }
 .aboutus_box2 .content_box ul li span:first-child {
-    width: 150px;
+    width: clamp(80px, 15vw, 150px);
     color: #5B5B5B;
-    font-size: 22px;
+    font-size: clamp(16px, 2vw, 22px);
 }
 .aboutus_box2 .content_box ul li span:last-child {
-    font-size: 24px;
+    font-size: clamp(16px, 2.5vw, 24px);
     color: #fff;
 }
 .aboutus_box3 .content_box .txt {
@@ -165,11 +168,12 @@ div[class^=aboutus_box] {
     align-items: center;
 }
 .aboutus_box3 .content_box .colorbox div{
-    width: 250px;
-    height: 60px;
+    width: clamp(150px, 20vw, 250px);
+    height: clamp(45px, 5vw, 60px);
     border-radius: 10px;
-    line-height: 60px;
+    line-height: clamp(45px, 5vw, 60px);
     text-align: center;
+    font-size: clamp(14px, 1.5vw, 18px);
 }
 .aboutus_box3 .content_box .colorbox div span{
     font-weight: 700;
@@ -188,10 +192,12 @@ div[class^=aboutus_box] {
     color: #5B5B5B;
 }
 .aboutus_box3 .image_box {
-    margin-left: 192px;
+    margin-left: clamp(20px, 10vw, 192px);
     background-image: url(../images/aboutus_02.png);
-    width: 494px;
-    height: 467px;
+    width: clamp(280px, 35vw, 494px);
+    height: clamp(265px, 33vw, 467px);
+    background-size: contain;
+    background-repeat: no-repeat;
     animation: switch 5s infinite;
 }
 @keyframes switch {
@@ -200,17 +206,20 @@ div[class^=aboutus_box] {
     }
 }
 
+.history_box {
+    margin-bottom: clamp(150px, 25vh, 300px);
+}
 .history_box .swiper{
-    margin-left: 13.5%;
-    width: calc(100% - 14%);
-    height: 647px;
+    margin-left: clamp(16px, 5vw, 13.5%);
+    width: calc(100% - clamp(16px, 5vw, 14%));
+    height: clamp(400px, 60vh, 647px);
 }
 .history_box .swiper .swiper-wrapper{
     display: flex;
     width: 100%;
-    height: 508px;
+    height: clamp(300px, 50vh, 508px);
     position: relative;
-    align-items: flex-end; 
+    align-items: flex-end;
 }
 .history_box .swiper .swiper-scrollbar{
     bottom: 0;
@@ -223,9 +232,9 @@ div[class^=aboutus_box] {
 }
 .history_box .swiper .swiper-wrapper .swiper-slide{
     position: relative;
-    padding: 0 0 58px 24px;
+    padding: 0 0 clamp(30px, 5vw, 58px) clamp(12px, 2vw, 24px);
     border-left:0;
-    height: 315px;
+    height: clamp(200px, 30vh, 315px);
     border-bottom: 2px solid #F26A25;
     display: flex;
     flex-direction: column;
@@ -234,7 +243,7 @@ div[class^=aboutus_box] {
 }
 .history_box .swiper .swiper-wrapper .swiper-slide:first-child{margin-left: 20px;}
 .history_box .swiper .swiper-wrapper .swiper-slide:hover{
-    height: 508px;
+    height: clamp(300px, 50vh, 508px);
     justify-content: flex-start;
 }
 .history_box .swiper .swiper-wrapper .swiper-slide:before{
@@ -265,18 +274,18 @@ div[class^=aboutus_box] {
     transition: height 1s ease;
 }
 .history_box .swiper .swiper-wrapper .swiper-slide:hover:after{
-    height:508px;
+    height: clamp(300px, 50vh, 508px);
 }
 .history_box .swiper .swiper-wrapper .swiper-slide .sub_title{
-    font-size: 46px;
+    font-size: clamp(28px, 4vw, 46px);
     font-weight: 700;
-    margin-bottom: 20px;
+    margin-bottom: clamp(10px, 2vw, 20px);
 }
 .history_box .swiper .swiper-wrapper .swiper-slide .title_box{
     display: none;
 }
 .history_box .swiper .swiper-wrapper .swiper-slide .title_box .title{
-    font-size: 60px;
+    font-size: clamp(36px, 5vw, 60px);
 }
 .history_box .swiper .swiper-wrapper .swiper-slide:hover .sub_title{
     display: none;
@@ -294,18 +303,22 @@ div[class^=aboutus_box] {
 }
 .client_box {
     padding: 0 14.5% 0 13.5%;
-    display: inline-flex;
+    display: flex;
+    flex-wrap: nowrap;
     width: 100%;
+    gap: clamp(20px, 5vw, 40px);
+    align-items: flex-start;
 }
 .client_box .title_box{
-    width: 100%;
+    width: 40%;
+    flex-shrink: 0;
 }
 .client_box .image_box {
-    margin-left: 156px;
     overflow: hidden;
     position: relative;
-    height: 636px;
-    width: 100%;
+    height: clamp(400px, 59vh, 636px);
+    width: clamp(280px, 35.7vw, 686px);
+    flex-shrink: 0;
 }
 .client_box .image_box .slider{
     width: 100%;
@@ -327,38 +340,42 @@ div[class^=aboutus_box] {
 .client_box .image_box .slider.img6 {transform: translateY(500%); z-index:1;}
 #business{
     width: 100%;
-    height: 1482px;
+    min-height: 100vh;
+    height: auto;
     background: url(../images/business_01.png) 100% bottom no-repeat;
+    background-size: contain;
 }
 .business_box {
     padding: 0 5%;
     display: flex;
     justify-content: space-between;
 }
-[class^="business_box"] .innerbox{
+#business [class^="business_box"] .innerbox{
     text-align: center;
-    padding: 190px 0 180px 0;
-    width: 580px;
-    height: 1080px;
-    border-radius: 50px;
+    padding: clamp(60px, 15vh, 190px) clamp(10px, 2vw, 0px) clamp(60px, 15vh, 180px) clamp(10px, 2vw, 0px);
+    width: clamp(280px, 30vw, 580px);
+    min-height: clamp(500px, 80vh, 1080px);
+    height: auto;
+    border-radius: clamp(25px, 4vw, 50px);
 }
-[class^="business_box"] .innerbox .title_box .stitle{
+#business [class^="business_box"] .innerbox .title_box .stitle{
     margin-bottom: 40px;
 }
-[class^="business_box"] .innerbox .title_box .title + p {
-    font-size: 26px;
-    margin-top: 20px;
+#business [class^="business_box"] .innerbox .title_box .title + p {
+    font-size: clamp(16px, 2vw, 26px);
+    margin-top: clamp(10px, 2vw, 20px);
     line-height: 1.5;
     font-weight: 300;
 }
-[class^="business_box"] .innerbox .txt{
+#business [class^="business_box"] .innerbox .txt{
     line-height: 36px;
     font-weight: 400;
 }
-.business_box .innerbox .title_box{height: 210px;}
+.business_box .innerbox .title_box{height: auto; min-height: clamp(120px, 20vh, 210px);}
 .business_box .innerbox .txt {
-    margin-top: 60px;
-    height: 250px;
+    margin-top: clamp(20px, 5vh, 60px);
+    height: auto;
+    min-height: clamp(150px, 20vh, 250px);
 }
 .business_box .innerbox .more_btn{
     background: url(../images/business_icon_01.png) #FFFFFF 100% no-repeat;
@@ -381,8 +398,9 @@ div[class^=aboutus_box] {
 .business_box_active{
     overflow: hidden;
     display: none;
-    margin: 0 5%;
-    height: 1077px;
+    margin: 0 clamp(16px, 3vw, 5%);
+    min-height: clamp(500px, 80vh, 1077px);
+    height: auto;
 }
 .business_box_active .innerbox{
     width: 157px;
@@ -403,13 +421,13 @@ div[class^=aboutus_box] {
     display: none;
 }
 .business_box_active .click_title{
-    padding: 40px 84px;
+    padding: clamp(20px, 4vw, 40px) clamp(40px, 7vw, 84px);
     transform: rotate(90deg);
     transform-origin: left;
     white-space: nowrap;
     display: flex;
-    width: 1077px;
-    height: 157px;
+    width: clamp(500px, 80vh, 1077px);
+    height: clamp(100px, 12vw, 157px);
     margin-left: 50%;
     align-items: center;
     cursor: pointer;
@@ -426,67 +444,74 @@ div[class^=aboutus_box] {
     font-weight: 700;
     padding-left: 75px;
 }
-.business_box_active .innerbox_active{
+#business .business_box_active .innerbox_active{
     text-align: left;
     color: #000000;
     background: url(../images/business_02.png), linear-gradient(90deg, rgba(255,255,255,1) 95%, rgba(153,153,153,1) 100%);
     background-repeat: no-repeat;
     background-position: right center;
-    padding: 81px 100px 0 129px;
-    width: 1412px;
-    height: 1077px;
-    border-radius: 40px;
-    gap: 10%;
+    background-size: auto 100%;
+    padding: clamp(40px, 7vh, 81px) clamp(30px, 7vw, 100px) clamp(40px, 5vh, 0px) clamp(40px, 9vw, 129px);
+    width: 100%;
+    max-width: 1412px;
+    min-height: clamp(500px, 80vh, 1077px);
+    height: auto;
+    border-radius: clamp(20px, 3vw, 40px);
+    gap: clamp(20px, 5vw, 10%);
     display: none;
 }
-.business_box_active .innerbox_active.mo {
+#business .business_box_active .innerbox_active.mo {
     background: url(../images/business_03.png), linear-gradient(90deg, rgba(255,255,255,1) 95%, rgba(153,153,153,1) 100%);
     background-repeat: no-repeat;
     background-position: right center;
 }
-.business_box_active .innerbox_active.acc {
+#business .business_box_active .innerbox_active.acc {
     background: url(../images/business_04.png), linear-gradient(90deg, rgba(255,255,255,1) 95%, rgba(153,153,153,1) 100%);
     background-repeat: no-repeat;
     background-position: right center;
 }
-.business_box_active .innerbox_active .txt{
-    margin-top: 40px;
-    height: 281px;
+#business .business_box_active .innerbox_active .txt{
+    margin-top: clamp(20px, 4vw, 40px);
+    height: auto;
+    min-height: clamp(150px, 25vh, 281px);
 }
-.business_box_active .innerbox_active .left_side {
+#business .business_box_active .innerbox_active .left_side {
     width: 40%;
 }
-.business_box_active .innerbox_active .right_side {
+#business .business_box_active .innerbox_active .right_side {
     overflow: hidden;
     width: 50%;
+    max-height: 65vh;
+    position: relative;
 }
-.business_box_active .innerbox_active .rollingbannerwrap ul div:first-of-type li:nth-child(even), .business_box_active .innerbox_active .rollingbannerwrap ul div:last-of-type li:nth-child(odd) {
+#business .business_box_active .innerbox_active .rollingbannerwrap ul div:first-of-type li:nth-child(even), #business .business_box_active .innerbox_active .rollingbannerwrap ul div:last-of-type li:nth-child(odd) {
     text-align: right;
 }
-.business_box_active .innerbox .innerbox_active .right_side .rollingbanner_ul li img{
-    width: 600px;
+#business .business_box_active .innerbox .innerbox_active .right_side .rollingbanner_ul li img{
+    width: 100%;
+    max-width: 450px;
     height: auto;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
-.business_box_active .innerbox.acc .innerbox_active .right_side .rollingbanner_ul img{
+#business .business_box_active .innerbox.acc .innerbox_active .right_side .rollingbanner_ul img{
     width: 375px;
 }
 .business_box_active .innerbox_active .right_side .graybox{
     background-color: #F1F1F1;
     border-radius: 40px;
-    padding: 50px 60px;
+    padding: clamp(24px, 4vw, 50px) clamp(24px, 5vw, 60px);
     box-shadow: 0px 4px 4px #00000040;
 }
 .business_box_active .innerbox_active .right_side .graybox + .graybox{
-    margin-top: 50px;
+    margin-top: clamp(24px, 4vw, 50px);
 }
 .business_box_active .innerbox_active .right_side .graybox h4{
     margin-bottom: 16px;
 }
 .business_box_active .innerbox_active .right_side .graybox p{
-    font-size: 18px;
+    font-size: clamp(14px, 1.5vw, 18px);
     font-weight: 300;
-    line-height: 30px;
+    line-height: 1.7;
 }
 .business_box_active .innerbox_active .right_side .graybox .notice_icon{
     background-color: #AECEEF;
@@ -510,13 +535,13 @@ div[class^=aboutus_box] {
 .business_box_active .innerbox_active .inquiry_btn{
     background-color: #000;
     color: #FFFFFF;
-    margin-top: 102px;
+    margin-top: clamp(40px, 8vw, 102px);
 }
 .business_box_active .innerbox_active .inquiry_btn:hover {
     background-color: #F26A25;
     color: #000000;
 }
-.solution_box {padding: 21% 13% 20% 13.5%;}
+.solution_box {padding: 0 13.5% 10% 13.5%;}
 .solution_box .tab_container .tab_list{
     display: flex;
     border-bottom: 2px solid #272727;
@@ -524,13 +549,14 @@ div[class^=aboutus_box] {
     gap: 2px;
 }
 .solution_box .tab_container .tab_list a{
-    padding: 17px 0;
-    width: 247px;
-    border-radius: 20px 20px 0 0;
+    padding: clamp(10px, 2vw, 17px) 0;
+    width: clamp(80px, 18vw, 247px);
+    border-radius: clamp(10px, 2vw, 20px) clamp(10px, 2vw, 20px) 0 0;
     text-align: center;
     background-color: #151515;
     color: #5B5B5B;
     font-weight: 700;
+    font-size: clamp(12px, 1.5vw, 16px);
 }
 .solution_box .tab_container .tab_list a.on{
     background-color: #FFFFFF;
@@ -597,41 +623,49 @@ div[class^=aboutus_box] {
 }
 .solution_box .tab_content .supportbox {
     background-color: #FFFFFF;
-    border-radius: 40px;
+    border-radius: clamp(20px, 3vw, 40px);
     width: 100%;
-    padding: 50px 60px;
+    padding: clamp(24px, 4vw, 50px) clamp(20px, 5vw, 60px);
     color: #000000;
 }
 .solution_box .tab_content .supportbox + .supportbox{
     margin-top: 30px;
 }
-.solution_box .tab_content .supportbox h3{ font-size: 30px; }
+.solution_box .tab_content .supportbox h3{ font-size: clamp(20px, 3vw, 30px); }
 .solution_box .tab_content .supportbox h3 + p{
-    font-size: 18px;
+    font-size: clamp(14px, 1.5vw, 18px);
     line-height: 1.7;
     font-weight: 500;
-    padding: 16px 0;
+    padding: clamp(10px, 1.5vw, 16px) 0;
 }
 .career_box {padding: 0 13.5% 10% 13.5%;}
 .career_box .talent_wrap{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
-    margin-top: 9%;
-} 
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+    grid-template-rows: auto auto;
+    gap: clamp(16px, 3vw, 40px);
+    margin-top: clamp(30px, 7vw, 9%);
+}
 .career_box .talent_wrap .talent_box.ideal{
     background-color: #F26A25;
-    width: 46%;
+    width: clamp(280px, 25vw, 450px);
+    grid-column: 1;
+    grid-row: 1;
 }
 .career_box .talent_wrap .talent_box.common{
     background-color: #FFBA53;
-    width: 350px;
+    width: clamp(200px, 18vw, 300px);
+    grid-column: 2;
+    grid-row: 1;
 }
 .career_box .talent_wrap .talent_box.always{
-    width: 46%;
-    height: 319px;
+    width: clamp(200px, 25vw, 400px);
+    grid-column: 1;
+    grid-row: 2;
+    height: auto;
+    min-height: clamp(200px, 30vh, 319px);
     text-align: left;
-    padding: 112px 0 0 126px;
+    padding: clamp(50px, 10vh, 112px) 0 clamp(30px, 5vh, 0px) clamp(40px, 8vw, 126px);
 }
 .career_box .talent_wrap .talent_box.always::before, .career_box .talent_wrap .talent_box.always::after{
     content: '';
@@ -648,20 +682,24 @@ div[class^=aboutus_box] {
     transform: rotate(90deg);
 }
 .career_box .talent_wrap .talent_box.always p{
-    font-size: 36px;
+    font-size: clamp(20px, 3vw, 36px);
     font-weight: 500;
     color: #434343;
 }
 .career_box .talent_wrap .talent_box.joining{
     background-color: #B1DDE7;
-    width: calc(54% - 40px);
-    height: 319px;
+    width: 100%;
+    grid-column: 2 / 4;
+    grid-row: 2;
+    height: auto;
+    min-height: clamp(200px, 30vh, 319px);
 }
 .career_box .talent_wrap .talent_box {
-    border-radius: 40px;
+    border-radius: clamp(20px, 3vw, 40px);
     position: relative;
-    padding: 2% 2.5%;
-    height: 273px;
+    padding: clamp(10px, 2%, 2%) clamp(10px, 2.5%, 2.5%);
+    height: auto;
+    min-height: clamp(180px, 25vh, 273px);
     transition: background-color 300ms linear;
 }
 .career_box .talent_wrap .talent_box:hover:not(.always) {
@@ -681,9 +719,9 @@ div[class^=aboutus_box] {
     padding-top: 69px;
 }
 .career_box .talent_wrap .talent_box .defaultdiv p{
-    font-size: 36px;
+    font-size: clamp(24px, 3vw, 36px);
     font-weight: 700;
-    margin-top: 16px;
+    margin-top: clamp(10px, 1.5vw, 16px);
 }
 .career_box .talent_wrap .talent_box .defaultdiv::before{
     content: '?';
@@ -737,7 +775,7 @@ div[class^=aboutus_box] {
     color: #BEBEBE;
 }
 .career_box .talent_wrap .talent_box .hoverdiv p:not(.annot){
-    font-size: 22px;
+    font-size: clamp(16px, 2vw, 22px);
     font-weight: 700;
     line-height: 1.5;
     color: #000000;
@@ -764,15 +802,15 @@ div[class^=aboutus_box] {
 }
 .career_box .recruitment_box{
     background-color: #F1F1F1;
-    border-radius: 40px;
-    padding: 50px 60px;
+    border-radius: clamp(20px, 3vw, 40px);
+    padding: clamp(24px, 4vw, 50px) clamp(24px, 5vw, 60px);
     color: #000000;
     opacity: 0.4;
     transition: opacity 300ms linear;
-    margin-top: 150px;
+    margin-top: clamp(60px, 12vh, 150px);
 }
 .career_box .recruitment_box + .recruitment_box{
-    margin-top: 40px;
+    margin-top: clamp(20px, 3vw, 40px);
 }
 .career_box .recruitment_box:hover{
     opacity: 1;
@@ -791,18 +829,20 @@ div[class^=aboutus_box] {
 }
 .contact_box{
     background-color: #121212;
-    padding: 5.5% 6% 0 10%;
+    padding: clamp(24px, 5.5%, 5.5%) clamp(16px, 5vw, 6%) clamp(24px, 3vh, 0px) clamp(16px, 7vw, 10%);
     display: flex;
-    gap: 20%;
+    flex-wrap: wrap;
+    gap: clamp(24px, 5vw, 20%);
 }
 .contact_box .logo_wrap{
     width: auto;
     display: flex;
     flex-direction: column;
-    gap: 34px;
+    gap: clamp(16px, 3vw, 34px);
+    flex-shrink: 0;
 }
 .contact_box .logo_wrap img{
-    width: 230px;
+    width: clamp(150px, 20vw, 230px);
     height: auto;
 }
 .contact_box .logo_wrap span{
@@ -816,20 +856,21 @@ div[class^=aboutus_box] {
     text-align: center;
 }
 .contact_box .contact_content_wrap>p{
-    font-size: 18px;
+    font-size: clamp(14px, 1.5vw, 18px);
     font-weight: 500;
-    padding-bottom: 65px;
+    padding-bottom: clamp(24px, 5vw, 65px);
     line-height: 1.5;
 }
 .contact_box .contact_content_wrap .contact_content_box ul{
     display: flex;
-    gap: 20px 40px;
+    gap: clamp(12px, 2vw, 20px) clamp(20px, 3vw, 40px);
     flex-wrap: wrap;
 }
 .contact_box .contact_content_wrap .contact_content_box ul li {
-    font-size: 14px;
+    font-size: clamp(12px, 1.2vw, 14px);
     font-weight: 300;
-    width: calc(50% - 20px);
+    width: calc(50% - clamp(10px, 1.5vw, 20px));
+    min-width: 200px;
 }
 .contact_box .contact_content_wrap .contact_content_box ul li span{
     border-left: 1px solid #F26A25;
@@ -864,13 +905,14 @@ div[class^=aboutus_box] {
     top: 55%;
 }
 .swiper .swiper-slide .swiper-txtbox .btxt{
-    font-size: 80px;
+    font-size: clamp(32px, 8vw, 80px);
     font-weight: 700;
-    line-height: 100px;
+    line-height: 1.25;
 }
 .swiper .swiper-slide .swiper-txtbox .txt{
-    line-height: 30px;
-    margin-top: 30px;
+    font-size: clamp(14px, 2vw, 24px);
+    line-height: 1.5;
+    margin-top: clamp(10px, 3vw, 30px);
 }
 .swiper .swiper-pagination{
     position: absolute;
@@ -1019,25 +1061,6 @@ body{background: var(--bg); color: var(--text);}
 
     .only-desktop { display: none; }
     .only-mobile { display: block; }
-
-    .title{
-        font-size: 5vw;
-    }
-
-    .stitle{
-        font-size: 4vw;
-    }
-
-    .swiper .swiper-slide .swiper-txtbox .btxt{
-        font-size: 7vw;
-        line-height: 10.5vh;
-    }
-
-    .swiper .swiper-slide .swiper-txtbox .txt{
-        margin-top: 0px;
-        font-size: 2vw;
-        line-height: 2.5vh;
-    }
 
     .swiper .swiper-pagination{
         bottom: 0px !important;
@@ -1192,10 +1215,12 @@ body{background: var(--bg); color: var(--text);}
     }
 
     .client_box .title_box {
+        width: 100%;
         margin-bottom: 10vh;
     }
 
     .client_box .image_box{
+        width: 100%;
         margin-left: 0px;
     }
 
@@ -1214,10 +1239,13 @@ body{background: var(--bg); color: var(--text);}
     }
 
     #mobile_business .business_box .innerbox{
-        height: 10vh;
-        padding: 0;
+        height: auto;
+        min-height: 10vh;
+        padding: 16px 0;
         display: flex;
         align-items: center;
+        width: 100%;
+        border-radius: 0;
     }
 
     #mobile_business .business_box .innerbox .title_box{
@@ -1322,23 +1350,31 @@ body{background: var(--bg); color: var(--text);}
         max-height: 0;
         overflow: hidden;
         transition: max-height .35s ease;
+        background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(240,240,240,1) 100%);
+        border-radius: 20px;
+        color: #000;
+        text-align: left;
     }
     #mobile_business .business_box_active .innerbox.active .innerbox_active{
-        max-height: 2000px; /* 충분히 크게 */
+        max-height: 3000px; /* 충분히 크게 */
+        padding: 40px 20px;
     }
 
     #mobile_business .business_box_active .innerbox .innerbox_active .left_side .txt {
-        width: 88vw;
-        height: 10vh;
+        width: 100%;
+        height: auto;
         font-weight: 300;
+        font-size: clamp(14px, 3.5vw, 18px);
+        line-height: 1.6;
     }
 
     #mobile_business .business_box_active .innerbox .innerbox_active .left_side a button{
-        margin-top: 40px;
+        margin-top: 24px;
     }
 
     #mobile_business .business_box_active .innerbox .innerbox_active .left_side{
-        margin-bottom: 5vh;
+        margin-bottom: 24px;
+        width: 100%;
     }
 
     #mobile_business .business_box_active .innerbox .title_box .title + p{
@@ -1347,34 +1383,99 @@ body{background: var(--bg); color: var(--text);}
 
     #mobile_business .business_box_active .innerbox .innerbox_active .right_side{
         width: 100%;
+        overflow: hidden;
+        max-height: 50vh;
+        position: relative;
+    }
+
+    #mobile_business .business_box_active .innerbox .innerbox_active .right_side .rollingbanner{
+        max-height: 50vh;
+        overflow: hidden;
     }
 
     #mobile_business .business_box_active .innerbox .innerbox_active .right_side .rollingbanner_ul li img{
-        width: 80vw;
+        width: 70vw;
+        height: auto;
+        max-height: 40vh;
+        object-fit: contain;
     }
 
     .solution_box{
-        min-height: 170vh;
+        min-height: auto;
         height: auto;
-        padding: 0 3.5% 0 4.5%;
     }
 
     .career_box{
-        min-height: 300vh;
+        min-height: auto;
         height: auto;
-        padding: 0 3.5% 0 4.5%;
     }
 
-    .talent_box .hoverdiv {
-        display: block !important;
+    .career_box .talent_wrap .talent_box .hoverdiv {
+        display: block;
     }
-    
-    .talent_box .defaultdiv {
-        display: none !important;
+
+    .career_box .talent_wrap .talent_box .defaultdiv {
+        display: none;
     }
-    
-    .talent_box:not(.always) {
-        background-color: #F1F4F9 !important;
+
+    .career_box {
+        background-color: #1A1A1A;
+        padding: 5% 6%;
+    }
+
+    .career_box .title_box .stitle,
+    .career_box .title_box .title {
+        color: #FFFFFF;
+    }
+
+    .career_box .talent_wrap .talent_box:not(.always) {
+        background-color: #FFFFFF;
+    }
+
+    .career_box .talent_wrap .talent_box .hoverdiv p:not(.annot) {
+        color: #000000;
+    }
+
+    .career_box .talent_wrap .talent_box .hoverdiv .annot {
+        color: #000000;
+    }
+
+    .career_box .talent_wrap {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 16px;
+        grid-template-columns: none !important;
+        grid-template-rows: none !important;
+    }
+
+    .career_box .talent_wrap .talent_box.ideal {
+        width: 100% !important;
+        order: 1 !important;
+        grid-column: auto !important;
+        grid-row: auto !important;
+    }
+
+    .career_box .talent_wrap .talent_box.common {
+        width: calc(50% - 8px) !important;
+        order: 2 !important;
+        grid-column: auto !important;
+        grid-row: auto !important;
+    }
+
+    .career_box .talent_wrap .talent_box.always {
+        width: calc(50% - 8px) !important;
+        background-color: #E8E8E8;
+        order: 3 !important;
+        grid-column: auto !important;
+        grid-row: auto !important;
+    }
+
+    .career_box .talent_wrap .talent_box.joining {
+        width: 100% !important;
+        order: 4 !important;
+        background-color: #FFFFFF;
+        grid-column: auto !important;
+        grid-row: auto !important;
     }
 
     /*
@@ -1434,14 +1535,39 @@ body{background: var(--bg); color: var(--text);}
         height: 50vh;
     }
 
+    .career_box .talent_wrap {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        grid-template-columns: none !important;
+        grid-template-rows: none !important;
+    }
+
     .career_box .talent_wrap .talent_box.ideal{
-        width: 41vw;
-        min-width: 40vw;
-        flex-shrink: 0; /* 축소 방지 */
+        width: 100% !important;
+        order: 1 !important;
+        grid-column: auto !important;
+        grid-row: auto !important;
     }
 
     .career_box .talent_wrap .talent_box.common{
-        width: 43vw;
+        width: calc(50% - 8px) !important;
+        order: 2 !important;
+        grid-column: auto !important;
+        grid-row: auto !important;
+    }
+
+    .career_box .talent_wrap .talent_box.always{
+        width: calc(50% - 8px) !important;
+        order: 3 !important;
+        grid-column: auto !important;
+        grid-row: auto !important;
+    }
+
+    .career_box .talent_wrap .talent_box.joining{
+        width: 100% !important;
+        order: 4 !important;
+        grid-column: auto !important;
+        grid-row: auto !important;
     }
 
     .history_box .swiper .swiper-wrapper .swiper-slide ul li{
@@ -1480,7 +1606,7 @@ body{background: var(--bg); color: var(--text);}
     }
 
     .contact_box{
-        display: block;
+        flex-direction: column;
     }
 
     .contact_box .logo_wrap span {
@@ -1495,14 +1621,6 @@ body{background: var(--bg); color: var(--text);}
         display: flex;
     }
 
-    .career_box .talent_wrap .talent_box.ideal{
-        width: 91vw;
-    }
-
-    .career_box .talent_wrap .talent_box.always{
-        height: 100%;
-    }
-
     .career_box .talent_wrap .talent_box.always::before {
         left: 24%;
         top: 20%;
@@ -1513,53 +1631,22 @@ body{background: var(--bg); color: var(--text);}
         top: 20%;
     }
 
-    .career_box .talent_wrap .talent_box.always {
-        padding: 80px 0 0 57px;
-    }
-
-    .career_box .talent_wrap .talent_box.joining{
-        width: 91vw;
-        height: 25vh;
-    }
-
-    .career_box {
-        min-height: 330vh;
-    }
-
-    .solution_box {
-        min-height: 120vh;
-    }
-
 }
 
 @media (max-width: 470px){
     :root{ --side-padding: 7%; }
 
-    #home .swiper .swiper-slide .swiper-txtbox .btxt{
-        line-height: 5.5vh;
-    }
-
-    #home .swiper .swiper-slide .swiper-txtbox .txt{
-        line-height: 1.7vh;
-    }
-
-    .career_box {
-        min-height: 350vh;
-    }
-
     .career_box .talent_wrap .talent_box{
-        height: 25vh;
+        min-height: 20vh;
     }
 
     .career_box .talent_wrap .talent_box.common{
-        width: 42vw;
+        width: 100%;
     }
 
-    .solution_box {
-        min-height: 110vh;
+    .career_box .talent_wrap .talent_box.always{
+        width: 100%;
     }
-
-
 }
 
 @media (max-width: 360px){
